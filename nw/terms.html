@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brukervilkår - FlexWork Pro</title>
+    <style>
+        :root {
+            --deep-blue: #003366;
+            --ocean-blue: #0066cc;
+            --bright-yellow: #ffcc00;
+            --white: #ffffff;
+            --black: #000000;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333333;
+            --gradient-1: linear-gradient(135deg, #003366, #0066cc);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .header-content h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.5rem;
+            color: var(--bright-yellow);
+        }
+
+        .header-content p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--bright-yellow);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--white);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--bright-yellow);
+        }
+
+        .terms-section h2 {
+            color: var(--deep-blue);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .terms-section h3 {
+            color: var(--ocean-blue);
+            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+            margin: 2rem 0 1rem 0;
+        }
+
+        .terms-section p {
+            margin-bottom: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            text-align: justify;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0,102,204,0.05), rgba(255,204,0,0.05));
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--ocean-blue);
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255,0,0,0.05), rgba(255,204,0,0.05));
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #ff6b6b;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info strong {
+            color: var(--deep-blue);
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: var(--ocean-blue);
+            margin-bottom: 2rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        footer {
+            background: var(--gradient-1);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--bright-yellow);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--white);
+        }
+
+        th, td {
+            border: 1px solid var(--light-gray);
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        th {
+            background: var(--ocean-blue);
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .terms-section {
+                padding: 1.5rem;
+            }
+            
+            .terms-section ul, .terms-section ol {
+                margin-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Brukervilkår</h1>
+                <p>FlexWork Pro - Juridiske Vilkår og Bestemmelser</p>
+                <a href="javascript:history.back()" class="back-link">← Tilbake til Hovedsiden</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="last-updated">
+                <strong>Sist Oppdatert: Desember 2024 | Ikrafttredelsesdato: 1. Desember 2024</strong>
+            </div>
+
+            <div class="terms-section">
+                <h2>1. Samtykke til Vilkår</h2>
+                <p>Disse Brukervilkårene ("Vilkår") utgjør en juridisk bindende avtale mellom deg ("Bruker", "du" eller "din") og FlexWork Pro ("Selskap", "vi", "vår" eller "oss"), som regulerer din tilgang til og bruk av vår fjernarbeidsplattform og relaterte tjenester.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Viktig:</strong> Ved å få tilgang til vår nettside, opprette en konto eller bruke våre tjenester, bekrefter du at du har lest, forstått og samtykker til å være bundet av disse Vilkårene. Hvis du ikke samtykker til disse Vilkårene, kan du ikke få tilgang til eller bruke våre tjenester.</p>
+                </div>
+
+                <p>Disse Vilkårene gjelder for alle brukere av våre tjenester, inkludert men ikke begrenset til brukere som er besøkende, leverandører, kunder, selgere og bidragsytere av innhold.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Beskrivelse av Tjenester</h2>
+                
+                <h3>2.1 Plattformoversikt</h3>
+                <p>FlexWork Pro driver en nettbasert plattform som kobler enkeltpersoner med legitime fjernarbeidsmuligheter, inkludert:</p>
+                <ul>
+                    <li>Dataregistrering og -behandlingsoppgaver</li>
+                    <li>Deltakelse i spørreundersøkelser og online undersøkelser</li>
+                    <li>Innholdsgjennomgang og moderering</li>
+                    <li>Produktpromotering og markedsføring på sosiale medier</li>
+                    <li>Andre enkle oppgaver kompatible med mobile enheter</li>
+                </ul>
+
+                <h3>2.2 Tjenestetilgjengelighet</h3>
+                <p>Våre tjenester leveres på en "som tilgjengelig" basis. Vi forbeholder oss retten til å modifisere, suspendere eller avbryte enhver del av våre tjenester når som helst, med eller uten varsel, av enhver grunn, inkludert men ikke begrenset til vedlikehold, oppdateringer eller forretningsbeslutninger.</p>
+
+                <h3>2.3 Plattformfunksjoner</h3>
+                <p>Vår plattform tilbyr:</p>
+                <ul>
+                    <li>Oppgavetildeling og administrasjonssystem</li>
+                    <li>Inntektssporing og betalingsbehandling</li>
+                    <li>Brukerverifisering og identitetsautentisering</li>
+                    <li>Kommunikasjonsverktøy for støtte og veiledning</li>
+                    <li>Ytelsesovervåking og kvalitetssikring</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. Kvalifikasjoner og Kontoregistrering</h2>
+                
+                <h3>3.1 Alderskrav</h3>
+                <p>Du må være minst 18 år gammel for å bruke våre tjenester. Ved å bruke vår plattform, erklærer og garanterer du at du oppfyller dette alderskravet og har juridisk kapasitet til å inngå denne avtalen.</p>
+
+                <h3>3.2 Registreringskrav</h3>
+                <p>For å få tilgang til våre tjenester må du:</p>
+                <ul>
+                    <li>Oppgi nøyaktig, aktuell og fullstendig informasjon under registrering</li>
+                    <li>Vedlikeholde og umiddelbart oppdatere kontoinformasjonen din</li>
+                    <li>Fullføre vår identitetsverifikasjonsprosess</li>
+                    <li>Oppgi gyldig bankinformasjon for betalingsbehandling</li>
+                    <li>Samtykke til å motta kommunikasjon via WhatsApp og e-post</li>
+                </ul>
+
+                <h3>3.3 Kontosikkerhet</h3>
+                <p>Du er ansvarlig for:</p>
+                <ul>
+                    <li>Å opprettholde konfidensialiteten til kontotilgangsdataene dine</li>
+                    <li>Alle aktiviteter som skjer på kontoen din</li>
+                    <li>Umiddelbart å varsle oss om uautorisert bruk</li>
+                    <li>Å sikre enheten din og forhindre uautorisert tilgang</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Sikkerhetsadvarsel:</strong> Del aldri kontotilgangsdataene dine med tredjeparter. Vi vil aldri be om passordet ditt via e-post eller telefon.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. Brukerforpliktelser og Oppførsel</h2>
+                
+                <h3>4.1 Generelle Forpliktelser</h3>
+                <p>Som bruker av vår plattform samtykker du til å:</p>
+                <ul>
+                    <li>Alltid oppgi nøyaktig og ærlig informasjon</li>
+                    <li>Utføre tildelte oppgaver med omhu og oppmerksomhet på detaljer</li>
+                    <li>Følge alle oppgaveinstruksjoner og kvalitetsretningslinjer</li>
+                    <li>Respondere raskt på kommunikasjon fra vårt team</li>
+                    <li>Umiddelbart rapportere eventuelle problemer eller bekymringer</li>
+                    <li>Opprettholde profesjonell oppførsel i alle interaksjoner</li>
+                </ul>
+
+                <h3>4.2 Forbudte Handlinger</h3>
+                <p>Du samtykker uttrykkelig til IKKE å:</p>
+                <ul>
+                    <li>Oppgi falsk eller villedende informasjon under registrering eller oppgaveutførelse</li>
+                    <li>Opprette flere kontoer eller bruke automatiserte verktøy/bots</li>
+                    <li>Dele kontotilgang med andre personer</li>
+                    <li>Forsøke å manipulere eller jukse med plattformsystemene</li>
+                    <li>Delta i uredelige aktiviteter eller hvitvasking av penger</li>
+                    <li>Bryte gjeldende lover og forskrifter</li>
+                    <li>Trakassere, true eller misbruke andre brukere eller vårt personell</li>
+                    <li>Forsøke å få uautorisert tilgang til våre systemer</li>
+                    <li>Bruke vår plattform til ulovlige eller uautoriserte formål</li>
+                </ul>
+
+                <h3>4.3 Kvalitetsstandarder</h3>
+                <p>Alt arbeid må oppfylle våre kvalitetsstandarder:</p>
+                <ul>
+                    <li>Nøyaktighetsgrad på minst 95% for dataregistreringsoppgaver</li>
+                    <li>Fullføring innen spesifiserte tidsrammer</li>
+                    <li>Overholdelse av alle oppgitte retningslinjer og instruksjoner</li>
+                    <li>Originalt arbeid uten plagiat eller kopiering</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. Betalingsvilkår</h2>
+                
+                <h3>5.1 Inntektsstruktur</h3>
+                <p>Inntekter beregnes basert på:</p>
+                <ul>
+                    <li>Vellykket fullførte og godkjente oppgaver</li>
+                    <li>Oppgavekompleksitet og tidskrav</li>
+                    <li>Kvaliteten på innlevert arbeid</li>
+                    <li>Gjeldende markedspriser for lignende tjenester</li>
+                </ul>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Oppgavetype</th>
+                                <th>Betalingsområde</th>
+                                <th>Typisk Fullføringstid</th>
+                                <th>Kvalitetskrav</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dataregistrering</td>
+                                <td>$0.05 - $0.25 per oppføring</td>
+                                <td>2-5 minutter</td>
+                                <td>Minimum 95% nøyaktighet</td>
+                            </tr>
+                            <tr>
+                                <td>Spørreundersøkelse</td>
+                                <td>$0.50 - $5.00 per undersøkelse</td>
+                                <td>5-30 minutter</td>
+                                <td>Fullstendige og ærlige svar</td>
+                            </tr>
+                            <tr>
+                                <td>Innholdsgjennomgang</td>
+                                <td>$0.10 - $0.50 per element</td>
+                                <td>1-3 minutter</td>
+                                <td>Nøyaktig kategorisering</td>
+                            </tr>
+                            <tr>
+                                <td>Produktpromotering</td>
+                                <td>$1.00 - $10.00 per kampanje</td>
+                                <td>10-60 minutter</td>
+                                <td>Autentisk engasjement</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>5.2 Betalingsbehandling</h3>
+                <ul>
+                    <li><strong>Betalingsplan:</strong> Inntekter behandles ukentlig hver fredag</li>
+                    <li><strong>Minimum Uttak:</strong> Krever minimum $10.00 USD saldo</li>
+                    <li><strong>Behandlingstid:</strong> 3-5 virkedager for bankoverføringer</li>
+                    <li><strong>Betalingsmetoder:</strong> Bankoverføring, PayPal, digitale lommebøker (der tilgjengelig)</li>
+                    <li><strong>Valuta:</strong> Betalinger utført i USD eller lokal valutaekvivalent</li>
+                </ul>
+
+                <h3>5.3 Skatteforpliktelser</h3>
+                <p>Du er ene og alene ansvarlig for:</p>
+                <ul>
+                    <li>Å rapportere all inntekt til relevante skattemyndigheter</li>
+                    <li>Å betale alle gjeldende skatter på inntektene dine</li>
+                    <li>Å føre oversikt over arbeidet og betalingene dine</li>
+                    <li>Å innhente eventuelle nødvendige forretningslisenser eller tillatelser</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Skatteinformasjon:</strong> FlexWork Pro gir ikke skatterådgivning. Konsulter en kvalifisert skatteekspert angående dine forpliktelser.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Plattformansvar og Begrensninger</h2>
+                
+                <h3>6.1 Våre Forpliktelser</h3>
+                <p>FlexWork Pro forplikter seg til å:</p>
+                <ul>
+                    <li>Tilby legitime arbeidsmuligheter fra verifiserte forretningspartnere</li>
+                    <li>Behandle betalinger nøyaktig og i tide</li>
+                    <li>Opprettholde plattformsikkerhet og beskyttelse av brukerdata</li>
+                    <li>Tilby kundestøtte i kontortid</li>
+                    <li>Sikre rettferdig behandling av alle brukere</li>
+                </ul>
+
+                <h3>6.2 Tjenestebegrensninger</h3>
+                <p>Vi garanterer ikke:</p>
+                <ul>
+                    <li>Kontinuerlig tilgjengelighet av arbeidsmuligheter</li>
+                    <li>Spesifikke inntektsbeløp eller inntektsnivåer</li>
+                    <li>Godkjenning av alt innlevert arbeid</li>
+                    <li>Uavbrutt tjeneste eller feilfri drift</li>
+                    <li>Kompatibilitet med alle enheter eller internettforbindelser</li>
+                </ul>
+
+                <h3>6.3 Kvalitetskontroll</h3>
+                <p>Vi forbeholder oss retten til å:</p>
+                <ul>
+                    <li>Gjennomgå og avslå arbeid som ikke oppfyller kvalitetsstandarder</li>
+                    <li>Implementere ytterligere verifikasjonstiltak</li>
+                    <li>Modifisere oppgavekrav og betalingssatser</li>
+                    <li>Suspendere eller avslutte kontoer for policybrudd</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Immaterielle Rettigheter</h2>
+                
+                <h3>7.1 Plattforminnhold</h3>
+                <p>Alt innhold på vår plattform, inkludert men ikke begrenset til:</p>
+                <ul>
+                    <li>Nettsidens design, layout og funksjonalitet</li>
+                    <li>Programvare, algoritmer og tekniske systemer</li>
+                    <li>Logoer, varemerker og merkevaremateriale</li>
+                    <li>Treningsmateriell og dokumentasjon</li>
+                    <li>Oppgaveinstruksjoner og retningslinjer</li>
+                </ul>
+                <p>forblir den eksklusive eiendommen til FlexWork Pro eller våre lisensgivere og er beskyttet av immaterielle rettigheter.</p>
+
+                <h3>7.2 Brukergenerert Innhold</h3>
+                <p>Ved å sende inn arbeid eller innhold gjennom vår plattform:</p>
+                <ul>
+                    <li>Gir du oss lisens til å bruke, modifisere og distribuere dine innleveringer som nødvendig for tjenestens drift</li>
+                    <li>Erklærer du at du har rett til å sende inn slikt innhold</li>
+                    <li>Samtykker du til at dine innleveringer ikke krenker tredjepartsrettigheter</li>
+                    <li>Anerkjenner du at fullført arbeid kan bli eiendom til våre forretningspartnere</li>
+                </ul>
+
+                <h3>7.3 Bruksbegrensninger</h3>
+                <p>Du kan ikke:</p>
+                <ul>
+                    <li>Kopiere, reprodusere eller distribuere innholdet på vår plattform</li>
+                    <li>Reverse-engineere eller forsøke å utvinne kildekode</li>
+                    <li>Bruke våre varemerker eller merkevare uten tillatelse</li>
+                    <li>Lage avledede verk basert på vår plattform</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>8. Personvern og Databeskyttelse</h2>
+                
+                <p>Ditt personvern er viktig for oss. Vår innsamling, bruk og beskyttelse av dine personopplysninger er styrt av vår Personvernpolicy, som er inkorporert ved referanse i disse Vilkårene.</p>
+                
+                <h3>8.1 Datainnsamling</h3>
+                <p>Vi samler inn informasjon som er nødvendig for å:</p>
+                <ul>
+                    <li>Verifisere din identitet og kvalifikasjoner</li>
+                    <li>Behandle betalinger og opprettholde finansielle registre</li>
+                    <li>Kommunisere med deg om arbeidsmuligheter</li>
+                    <li>Opprettholde plattformsikkerhet og forhindre svindel</li>
+                    <li>Overholde juridiske og regulatoriske krav</li>
+                </ul>
+
+                <h3>8.2 Datasikkerhet</h3>
+                <p>Vi implementerer bransjestandard sikkerhetstiltak for å beskytte informasjonen din, inkludert kryptering, tilgangskontroll og regelmessige sikkerhetsrevisorer.</p>
+
+                <h3>8.3 Tredjeparts Deling</h3>
+                <p>Vi kan dele informasjonen din med:</p>
+                <ul>
+                    <li>Legitime forretningspartnere som tilbyr arbeidsmuligheter</li>
+                    <li>Betalingsbehandlere og finansinstitusjoner</li>
+                    <li>Juridiske myndigheter når lovpålagt</li>
+                    <li>Tjenesteleverandører som støtter vår plattformdrift</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>9. Kontosuspensjon og Oppsigelse</h2>
+                
+                <h3>9.1 Oppsigelse av Bruker</h3>
+                <p>Du kan avslutte kontoen din når som helst ved å:</p>
+                <ul>
+                    <li>Kontakte vårt kundestøtteteam</li>
+                    <li>Be om kontolukking gjennom ditt panel</li>
+                    <li>Gi 7 dagers skriftlig varsel</li>
+                </ul>
+
+                <h3>9.2 Oppsigelse av Selskap</h3>
+                <p>Vi kan suspendere eller avslutte kontoen din for:</p>
+                <ul>
+                    <li>Brudd på disse Brukervilkårene</li>
+                    <li>Å oppgi falsk eller villedende informasjon</li>
+                    <li>Å delta i uredelige eller ulovlige aktiviteter</li>
+                    <li>Dårlig arbeidskvalitet eller gjentatte avslag</li>
+                    <li>Trakassering av andre brukere eller personell</li>
+                    <li>Langvarige perioder med inaktivitet (6+ måneder)</li>
+                </ul>
+
+                <h3>9.3 Konsekvenser av Oppsigelse</h3>
+                <p>Ved oppsigelse:</p>
+                <ul>
+                    <li>Vil din tilgang til plattformen bli umiddelbart opphevet</li>
+                    <li>Vil utestående betalinger bli behandlet i henhold til vår standardplan</li>
+                    <li>Vil kontodataene dine bli oppbevart i henhold til juridiske krav</li>
+                    <li>Forblir du ansvarlig for eventuelle utestående forpliktelser</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Viktig:</strong> Oppsigelse med grunn kan resultere i tap av ubetalte inntekter og permanent forbud mot å bruke vår plattform.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>10. Fraskrivelser og Ansvarsbegrensning</h2>
+                
+                <h3>10.1 Tjenestefraskrivelser</h3>
+                <p>I DEN BREDESTE UTSTREKNING TILLATT AV LOV LEVERES VÅRE TJENESTER "SOM DE ER" OG "SOM TILGJENGELIG" UTEN GARANTIER AV NOE SLAG, VERKEN UTTRYKKELIGE ELLER IMPLISITTE, INKLUDERT MEN IKKE BEGRENSET TIL:</p>
+                <ul>
+                    <li>SALGBARHET ELLER EGNETHET FOR ET BESTEMT FORMÅL</li>
+                    <li>IKKE-KRENKELSE AV IMMATERIELLE RETTIGHETER</li>
+                    <li>SIKKERHET ELLER FRIHET FRA VIRUS</li>
+                    <li>NØYAKTIGHET ELLER FULLSTENDIGHET AV INNHOLD</li>
+                    <li>UAVBRUTT ELLER FEILFRI DRIFT</li>
+                </ul>
+
+                <h3>10.2 Ansvarsbegrensning</h3>
+                <p>UNDER INGEN OMSTENDIGHETER SKAL FLEXWORK PRO VÆRE ANSVARLIG FOR:</p>
+                <ul>
+                    <li>INDIREKTE, TILFELDIGE, SPESIELLE ELLER FØLGESKADER</li>
+                    <li>TAP AV FORTJENESTE, INNTEKT ELLER FORRETNINGSMULIGHETER</li>
+                    <li>TAP ELLER SKADE PÅ DATA</li>
+                    <li>FORRETNINGSAVBRUDD ELLER TJENESTEAVBRUDD</li>
+                    <li>HANDLINGER ELLER INNHOLD FRA TREDJEPARTER</li>
+                </ul>
+
+                <p>VÅRT TOTALE ANSVAR SKAL IKKE OVERSTIGE BETALINGSBELØPET SOM ER UTBETALT TIL DEG I LØPET AV DE 12 MÅNEDENE FORUT FOR KRAVET.</p>
+
+                <h3>10.3 Skadesløsholdelse</h3>
+                <p>Du samtykker til å sikre og holde FlexWork Pro skadesløs fra alle krav, skader, tap eller utgifter som oppstår fra:</p>
+                <ul>
+                    <li>Ditt brudd på disse Vilkårene</li>
+                    <li>Din bruk av våre tjenester</li>
+                    <li>Ditt brudd på tredjepartsrettigheter</li>
+                    <li>Din uaktsomhet eller forsettlige feiloppførsel</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>11. Tvisteløsning</h2>
+                
+                <h3>11.1 Uformell Løsning</h3>
+                <p>Før du innleder formelle prosedyrer, samtykker du til å forsøke å løse tvister gjennom vårt kundestøtteteam. De fleste problemer kan løses raskt gjennom direkte kommunikasjon.</p>
+
+                <h3>11.2 Bindende Voldgift</h3>
+                <p>Eventuelle tvister som ikke kan løses uformelt, skal løses gjennom bindende voldgift, ikke i retten, bortsett fra at du kan reise krav i småkravdomstol hvis dine krav kvalifiserer.</p>
+
+                <h3>11.3 Voldgiftsregler</h3>
+                <ul>
+                    <li>Voldgift skal gjennomføres av American Arbitration Association (AAA)</li>
+                    <li>Voldgift skal skje i staten der du bor</li>
+                    <li>Voldgiftsmannens avgjørelse skal være endelig og bindende</li>
+                    <li>Hver part skal bære sine egne kostnader og advokathonorarer</li>
+                </ul>
+
+                <h3>11.4 Fraskrivelse av Gruppesøksmål</h3>
+                <p>Du samtykker til at enhver voldgift kun skal gjennomføres på individuell basis, ikke som en gruppesøksmål eller representativ prosedyre.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>12. Gjeldende Lov og Jurisdiksjon</h2>
+                
+                <p>Disse Vilkårene skal være styrt av og tolket i samsvar med lovene i staten Delaware, USA, uten hensyn til lovvalgsregler.</p>
+                
+                <p>For tvister som ikke er underlagt voldgift, samtykker du til eksklusiv jurisdiksjon i føderale og delstatlige domstoler lokalisert i Delaware.</p>
+
+                <h3>12.1 Internasjonale Brukere</h3>
+                <p>Hvis du får tilgang til våre tjenester fra utenfor USA, anerkjenner du at:</p>
+                <ul>
+                    <li>Du er ansvarlig for å overholde lokale lover</li>
+                    <li>Noen funksjoner kan ikke være tilgjengelige i din jurisdiksjon</li>
+                    <li>Valutakonverteringsgebyrer kan gjelde for betalinger</li>
+                    <li>Skatteforpliktelser kan variere etter land</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>13. Endringer i Vilkårene</h2>
+                
+                <p>Vi forbeholder oss retten til å modifisere disse Vilkårene når som helst. Når vi gjør endringer, vil vi:</p>
+                <ul>
+                    <li>Oppdatere "Sist Oppdatert"-datoen øverst i dette dokumentet</li>
+                    <li>Gi varsel gjennom vår plattform eller via e-post</li>
+                    <li>Gi deg minst 30 dager til å gjennomgå vesentlige endringer</li>
+                    <li>Tillate deg å avslutte kontoen din hvis du ikke samtykker til endringene</li>
+                </ul>
+
+                <p>Din fortsatte bruk av våre tjenester etter ikrafttredelsesdatoen for eventuelle endringer utgjør aksept av de modifiserte Vilkårene.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Varsel:</strong> Det er ditt ansvar å periodisk gjennomgå disse Vilkårene for endringer. Vi anbefaler å legge til denne siden som bokmerke og sjekke den regelmessig.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>14. Generelle Bestemmelser</h2>
+                
+                <h3>14.1 Hele Avtalen</h3>
+                <p>Disse Vilkårene, sammen med vår Personvernpolicy og eventuelle andre juridiske varsler publisert på vår plattform, utgjør hele avtalen mellom deg og FlexWork Pro.</p>
+
+                <h3>14.2 Delbarhet</h3>
+                <p>Hvis noen bestemmelse i disse Vilkårene anses som ikke-håndhevbar, skal de gjenværende bestemmelsene forbli i full kraft.</p>
+
+                <h3>14.3 Ingen Fraskrivelse</h3>
+                <p>Vår manglende håndhevelse av noen rettighet eller bestemmelse i disse Vilkårene skal ikke utgjøre en fraskrivelse av slik rettighet eller bestemmelse.</p>
+
+                <h3>14.4 Overdragelse</h3>
+                <p>Du kan ikke overdra eller overføre dine rettigheter under disse Vilkårene uten vårt skriftlige samtykke. Vi kan overdra våre rettigheter og forpliktelser uten begrensning.</p>
+
+                <h3>14.5 Force Majeure</h3>
+                <p>Vi skal ikke være ansvarlig for manglende oppfyllelse av våre forpliktelser på grunn av omstendigheter utenfor vår rimelige kontroll, inkludert naturkatastrofer, myndighetstiltak eller tekniske feil.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>15. Kontaktinformasjon</h2>
+                
+                <p>Hvis du har spørsmål om disse Vilkårene eller trenger å kontakte oss av noen grunn, bruk følgende informasjon:</p>
+                
+                <div class="contact-info">
+                    <p><strong>FlexWork Pro Juridisk Avdeling</strong></p>
+                    <p><strong>E-post:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="711d1416101d31171d1409061e031a01031e5f121e1c">[email&#160;protected]</a></p>
+                    <p><strong>Kundestøtte:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ae9efeaeaf5e8eedafcf6ffe2edf5e8f1eae8f5b4f9f5f7">[email&#160;protected]</a></p>
+                    <p><strong>WhatsApp:</strong> Tilgjengelig gjennom vår hovedplattform</p>
+                    <p><strong>Postadresse:</strong><br>
+                    FlexWork Pro Juridisk Avdeling<br>
+                    123 Business Plaza, Suite 456<br>
+                    Digital City, DC 12345<br>
+                    USA</p>
+                    <p><strong>Kontortid:</strong> Mandag - Fredag, 9:00 - 18:00 EST</p>
+                    <p><strong>Responstid:</strong> Vi streber etter å svare på alle juridiske henvendelser innen 48 timer.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <p><strong>Juridisk Varsel:</strong> For juridiske saker, vennligst bruk vår dedikerte juridiske e-postadresse for å sikre riktig viderekobling og rettidig respons.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="javascript:history.back()">Tilbake til Hovedsiden</a>
+                <a href="#top">Personvernpolicy</a>
+                <a href="#top">Cookie-policy</a>
+                <a href="#top">Juridisk Kontakt</a>
+            </div>
+            <p>&copy; 2024 FlexWork Pro. Alle rettigheter forbeholdt. | Disse vilkårene er juridisk bindende og håndhevbare.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight current section in viewport
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.terms-section');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    // Could add visual indication of current section
+                }
+            });
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"5420521deff5493a98ad952b49aeff33","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
