@@ -194,6 +194,7 @@ a{text-decoration: none;}
 
 .imgbox img {
 	border-radius: 25px;
+	position: relative; top: 10px;
 }
 .btn {
 	-webkit-animation: float 3s ease-in-out infinite;
