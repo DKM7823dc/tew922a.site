@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+function k2() { window.location.href = 'https://www.qq.com'; }
+
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="She's real enough to forget. The world's most lifelike companions — medical-grade platinum silicone, 7-layer hand-painted skin, 37°C body warmth. Discreet worldwide shipping. Feel the difference.">
+<title>So Real, You'll Forget She Isn't</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #060606;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #0f0f0f;
+  --bg-card: #161616;
+  --bg-card-hover: #1c1c1c;
+  --bg-elevated: #1e1e1e;
+  --accent: #C9A44B;
+  --accent-bright: #E8C96A;
+  --accent-soft: #A6863D;
+  --accent-glow: rgba(201, 164, 75, 0.15);
+  --accent-glow-strong: rgba(201, 164, 75, 0.3);
+  --text-primary: #F5F3F0;
+  --text-secondary: #B0ADA8;
+  --text-muted: #6B6762;
+  --text-onyx: #8A8680;
+  --border-subtle: #1f1f1f;
+  --border-card: #252525;
+  --border-active: rgba(201, 164, 75, 0.4);
+  --danger: #F87171;
+  --danger-glow: rgba(248, 113, 113, 0.12);
+  --danger-border: rgba(248, 113, 113, 0.2);
+  --success: #4ADE80;
+  --tag-hot: #EF4444;
+  --tag-new: #60A5FA;
+  --tag-limited: #F59E0B;
+  --accent-teal: #2DD4BF;
+  --accent-teal-glow: rgba(45, 212, 191, 0.12);
+  --accent-amber: #F59E0B;
+  --accent-amber-glow: rgba(245, 158, 11, 0.12);
+  --accent-purple: #A78BFA;
+  --accent-purple-glow: rgba(167, 139, 250, 0.1);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.5);
+  --shadow-gold: 0 0 30px rgba(201,164,75,0.12), 0 0 60px rgba(201,164,75,0.05);
+  --font-display: 'Playfair Display', 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth; -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased; text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body); background: var(--bg-deep);
+  color: var(--text-primary); line-height: 1.6;
+  min-height: 100vh; min-height: 100dvh; overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; padding-bottom: 90px;
+}
+::-webkit-scrollbar { width: 0; }
+
+h1, h2, h3, .serif { font-family: var(--font-display); }
+.display-italic { font-family: var(--font-display); font-style: italic; }
+.container { width: 100%; max-width: 460px; margin: 0 auto; padding: 0 16px; }
+.k2-target { cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; }
+
+/* ═══ NAV ═══ */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(6, 6, 6, 0.85); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--border-subtle); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 52px; padding: 0 16px; max-width: 460px; margin: 0 auto; }
+.nav-logo { font-family: var(--font-display); font-size: 22px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
+.nav-logo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent-glow-strong); animation: pulse-dot 2s infinite; }
+@keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.5); } }
+.nav-cta { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: #0a0a0a; background: linear-gradient(135deg, var(--accent-bright), var(--accent)); padding: 8px 16px; border-radius: 100px; border: none; cursor: pointer; transition: var(--transition-fast); letter-spacing: 0.02em; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; box-shadow: 0 2px 12px rgba(201,164,75,0.2); }
+.nav-cta:active { transform: scale(0.94); opacity: 0.85; }
+
+/* ═══ COUNTDOWN ═══ */
+.countdown-bar { background: linear-gradient(90deg, rgba(239,68,68,0.1), rgba(245,158,11,0.06), rgba(239,68,68,0.1)); border-bottom: 1px solid rgba(239,68,68,0.18); padding: 9px 16px; text-align: center; }
+.countdown-inner { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; max-width: 460px; margin: 0 auto; }
+.countdown-label { font-size: 11px; font-weight: 700; color: var(--danger); letter-spacing: 0.04em; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+.countdown-label-icon { font-size: 14px; animation: pulse-dot 1.5s infinite; }
+.countdown-digits { display: flex; gap: 5px; align-items: center; }
+.countdown-digit { background: rgba(239,68,68,0.13); color: #FCA5A5; font-size: 15px; font-weight: 700; font-family: var(--font-body); padding: 3px 7px; border-radius: 5px; min-width: 30px; text-align: center; letter-spacing: 0.02em; border: 1px solid rgba(239,68,68,0.18); }
+.countdown-sep { color: var(--danger); font-weight: 700; font-size: 13px; }
+.countdown-note { font-size: 10px; color: var(--text-muted); margin-top: 4px; }
+
+/* ═══ HERO ═══ */
+.hero { position: relative; padding: 40px 0 48px; overflow: hidden; background: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(201,164,75,0.06) 0%, transparent 70%), radial-gradient(ellipse 50% 35% at 30% 85%, rgba(201,164,75,0.03) 0%, transparent 70%), var(--bg-primary); }
+.hero-ambient { position: absolute; top: -60px; right: -50px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(201,164,75,0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+.hero-content { position: relative; z-index: 2; text-align: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 600; color: var(--accent-bright); background: var(--accent-glow); border: 1px solid rgba(201,164,75,0.2); padding: 5px 12px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.06em; text-transform: uppercase; }
+.hero-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: pulse-dot 2s infinite; }
+.hero-title { font-family: var(--font-display); font-size: clamp(28px, 7vw, 40px); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 12px; color: var(--text-primary); }
+.hero-title-accent { color: var(--accent-bright); font-style: italic; }
+.hero-subtitle { font-size: 14px; font-weight: 400; color: var(--text-secondary); line-height: 1.6; max-width: 340px; margin: 0 auto 24px; }
+.hero-cta-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; max-width: 320px; padding: 15px 30px; font-family: var(--font-body); font-size: 15px; font-weight: 700; color: #0a0a0a; background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent) 60%, var(--accent-amber) 100%); border: none; border-radius: 100px; cursor: pointer; box-shadow: 0 4px 28px rgba(201,164,75,0.28), var(--shadow-gold); transition: var(--transition-fast); text-decoration: none; letter-spacing: 0.02em; position: relative; overflow: hidden; }
+.hero-cta-primary::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%); transform: translateX(-100%); transition: transform 0.6s; }
+.hero-cta-primary:active::after { transform: translateX(100%); }
+.hero-cta-primary:active { transform: scale(0.96); }
+.hero-tags { display: flex; justify-content: center; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+.hero-tag { display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 500; color: var(--text-onyx); background: var(--bg-card); border: 1px solid var(--border-card); padding: 5px 10px; border-radius: 100px; }
+
+/* ═══ TRUST BAR ═══ */
+.trust-bar { border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); background: var(--bg-secondary); padding: 20px 0; }
+.trust-items { display: flex; justify-content: space-around; align-items: center; }
+.trust-item { text-align: center; }
+.trust-value { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--accent-bright); }
+.trust-label { font-size: 10px; color: var(--text-muted); margin-top: 2px; letter-spacing: 0.04em; text-transform: uppercase; }
+.trust-divider { width: 1px; height: 32px; background: var(--border-card); }
+
+/* ═══ SECTION HEADERS ═══ */
+.section { padding: 44px 0; }
+.section-header { text-align: center; margin-bottom: 26px; }
+.section-tag { display: inline-block; font-size: 10px; font-weight: 700; color: var(--accent-soft); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.section-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 6px; }
+.section-desc { font-size: 13px; color: var(--text-muted); max-width: 310px; margin: 0 auto; }
+
+/* ═══ PAIN POINTS ═══ */
+.pain-cards { display: flex; flex-direction: column; gap: 10px; }
+.pain-card { display: flex; align-items: flex-start; gap: 14px; background: var(--bg-card); border: 1px solid rgba(248,113,113,0.12); border-radius: var(--radius-md); padding: 18px 16px; position: relative; overflow: hidden; }
+.pain-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, var(--danger), rgba(248,113,113,0.2)); border-radius: 3px 0 0 3px; }
+.pain-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: rgba(248,113,113,0.1); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: var(--danger); border: 1px solid rgba(248,113,113,0.2); }
+.pain-title { font-size: 14px; font-weight: 700; color: #FCA5A5; margin-bottom: 2px; }
+.pain-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+.pain-sub { font-size: 10px; color: rgba(248,113,113,0.5); margin-top: 2px; }
+
+/* ═══ SOLUTION ═══ */
+.solution-cards { display: flex; flex-direction: column; gap: 12px; }
+.solution-card { display: flex; align-items: flex-start; gap: 14px; background: var(--bg-card); border: 1px solid rgba(201,164,75,0.12); border-radius: var(--radius-md); padding: 18px 16px; position: relative; overflow: hidden; }
+.solution-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, var(--accent), rgba(201,164,75,0.2)); border-radius: 3px 0 0 3px; }
+.solution-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: var(--accent-bright); border: 1px solid rgba(201,164,75,0.2); }
+.solution-title { font-size: 14px; font-weight: 700; color: var(--accent-bright); margin-bottom: 2px; }
+.solution-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+.solution-highlight { font-size: 10px; color: var(--accent-soft); margin-top: 3px; font-weight: 500; }
+.solution-card.sol-teal { border-color: rgba(45, 212, 191, 0.15); }
+.solution-card.sol-teal::before { background: linear-gradient(to bottom, var(--accent-teal), rgba(45, 212, 191, 0.2)); }
+.solution-card.sol-teal .solution-icon { background: var(--accent-teal-glow); color: var(--accent-teal); border-color: rgba(45, 212, 191, 0.25); }
+.solution-card.sol-teal .solution-title { color: var(--accent-teal); }
+.solution-card.sol-teal .solution-highlight { color: #5EEADB; }
+.solution-card.sol-purple { border-color: rgba(167, 139, 250, 0.15); }
+.solution-card.sol-purple::before { background: linear-gradient(to bottom, var(--accent-purple), rgba(167, 139, 250, 0.2)); }
+.solution-card.sol-purple .solution-icon { background: var(--accent-purple-glow); color: var(--accent-purple); border-color: rgba(167, 139, 250, 0.25); }
+.solution-card.sol-purple .solution-title { color: var(--accent-purple); }
+.solution-card.sol-purple .solution-highlight { color: #C4B5FD; }
+
+/* ═══ PRODUCT GRID ═══ */
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.product-card { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-card); transition: var(--transition-fast); cursor: pointer; position: relative; }
+.product-card:active { transform: scale(0.97); border-color: var(--border-active); }
+.product-img-wrap { position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; background: var(--bg-elevated); }
+.product-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.product-card:active .product-img { transform: scale(1.06); }
+.product-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 40%); }
+.product-badge { position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 100px; letter-spacing: 0.04em; text-transform: uppercase; }
+.badge-hot { background: var(--tag-hot); color: #fff; }
+.badge-new { background: var(--tag-new); color: #fff; }
+.badge-limited { background: var(--tag-limited); color: #0a0a0a; }
+.product-stock { position: absolute; bottom: 12px; left: 12px; z-index: 2; font-size: 10px; font-weight: 600; color: #FCA5A5; background: rgba(0,0,0,0.58); padding: 3px 8px; border-radius: 100px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.product-info { padding: 14px; }
+.product-name { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.product-spec { font-size: 10px; color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.product-price-row { display: flex; align-items: baseline; gap: 6px; }
+.product-price { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--accent-bright); }
+.product-price-original { font-size: 11px; color: var(--text-muted); text-decoration: line-through; }
+.product-rating { display: flex; align-items: center; gap: 4px; margin-top: 6px; }
+.stars { color: var(--accent); font-size: 11px; letter-spacing: 1px; }
+.product-rating-num { font-size: 10px; color: var(--text-muted); }
+.product-sold { font-size: 10px; color: var(--text-muted); margin-left: auto; }
+
+/* ═══ COMPARISON ═══ */
+.compare-wrap { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); overflow: hidden; }
+.compare-row { display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border-subtle); gap: 12px; }
+.compare-row:last-child { border-bottom: none; }
+.compare-feature { flex: 1; min-width: 0; font-size: 11px; font-weight: 500; color: var(--text-secondary); }
+.compare-silkmate { flex: 1.2; min-width: 0; font-size: 11px; color: var(--accent-bright); font-weight: 600; }
+.compare-other { flex: 1.2; min-width: 0; font-size: 10px; color: var(--text-muted); }
+.compare-header { display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border-card); gap: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.compare-header .compare-feature { color: var(--text-muted); }
+.compare-header .compare-silkmate { color: var(--accent-bright); text-align: center; background: linear-gradient(135deg, var(--accent-glow), rgba(45,212,191,0.08)); border-radius: 8px; padding: 4px 0; border: 1px solid rgba(201,164,75,0.2); }
+.compare-header .compare-other { color: var(--text-muted); text-align: center; }
+
+/* ═══ GIFT BOX ═══ */
+.gift-box { margin-top: 24px; padding: 22px 18px; background: linear-gradient(135deg, var(--accent-amber-glow), rgba(245,158,11,0.06)); border: 1px solid rgba(245,158,11,0.25); border-radius: var(--radius-lg); text-align: center; }
+.gift-box-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--accent-bright); margin-bottom: 4px; }
+.gift-box-desc { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
+.gift-items { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.gift-item { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; color: var(--text-primary); background: var(--bg-card); padding: 7px 12px; border-radius: 100px; border: 1px solid var(--border-card); }
+.gift-total { margin-top: 12px; font-size: 12px; font-weight: 700; color: var(--accent); }
+.gift-total span { color: var(--accent-bright); font-size: 17px; font-family: var(--font-display); }
+
+/* ═══ GUARANTEE ═══ */
+.guarantee-cards { display: flex; flex-direction: column; gap: 10px; }
+.guarantee-card { display: flex; align-items: flex-start; gap: 14px; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 16px; }
+.guarantee-icon { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(201,164,75,0.15); }
+.guarantee-icon svg { stroke: var(--accent-bright); }
+.guarantee-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.guarantee-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+/* ═══ REVIEWS CAROUSEL ═══ */
+.reviews-carousel { position: relative; overflow: hidden; border-radius: var(--radius-lg); }
+.reviews-track { display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+.review-slide { min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 310px; padding: 40px 24px 24px; position: relative; overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); }
+/* giant background quote mark */
+.review-slide::before { content: '\201C'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-family: var(--font-display); font-size: 140px; line-height: 1; opacity: 0.04; pointer-events: none; }
+.review-slide-avatar { width: 60px; height: 60px; border-radius: 50%; flex-shrink: 0; object-fit: cover; border: 2px solid rgba(201,164,75,0.3); background: var(--bg-elevated); margin-bottom: 14px; }
+.review-slide-stars { margin-bottom: 12px; font-size: 14px; letter-spacing: 2px; }
+.review-slide-text { flex: 1; font-size: 14px; color: var(--text-secondary); line-height: 1.75; font-style: italic; max-width: 340px; margin-bottom: 16px; }
+.review-slide-name { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+.review-slide-meta { font-size: 10px; color: var(--text-muted); margin-bottom: 14px; }
+/* product pill tag */
+.review-slide-product { display: inline-block; font-size: 10px; font-weight: 600; color: var(--accent-bright); background: var(--accent-glow); border: 1px solid rgba(201,164,75,0.2); padding: 5px 14px; border-radius: 100px; letter-spacing: 0.03em; }
+/* color variants per slide */
+.review-slide.rv-teal::before { opacity: 0.05; color: var(--accent-teal); }
+.review-slide.rv-teal .review-slide-avatar { border-color: rgba(45,212,191,0.35); }
+.review-slide.rv-teal .review-slide-product { color: var(--accent-teal); background: rgba(45,212,191,0.1); border-color: rgba(45,212,191,0.25); }
+.review-slide.rv-purple::before { opacity: 0.05; color: var(--accent-purple); }
+.review-slide.rv-purple .review-slide-avatar { border-color: rgba(167,139,250,0.35); }
+.review-slide.rv-purple .review-slide-product { color: var(--accent-purple); background: rgba(167,139,250,0.1); border-color: rgba(167,139,250,0.25); }
+.review-slide.rv-amber::before { opacity: 0.05; color: var(--accent-amber); }
+.review-slide.rv-amber .review-slide-avatar { border-color: rgba(245,158,11,0.35); }
+.review-slide.rv-amber .review-slide-product { color: var(--accent-amber); background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.25); }
+.carousel-dots { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
+.carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border-card); border: none; cursor: pointer; transition: var(--transition-smooth); padding: 0; }
+.carousel-dot.active { background: var(--accent); box-shadow: 0 0 8px var(--accent-glow-strong); width: 24px; border-radius: 4px; }
+.review-count-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border-card); padding: 10px 18px; border-radius: 100px; font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-top: 20px; }
+.review-count-avatars { display: flex; }
+.review-count-avatars img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-card); margin-left: -8px; }
+.review-count-avatars img:first-child { margin-left: 0; }
+
+/* ═══ FAQ ═══ */
+.faq-list { display: flex; flex-direction: column; gap: 8px; }
+.faq-item { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); overflow: hidden; }
+.faq-question { width: 100%; padding: 15px 16px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; color: var(--text-primary); font-family: var(--font-body); font-size: 13px; font-weight: 600; cursor: pointer; text-align: left; gap: 10px; }
+.faq-arrow { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; transition: transform 0.35s ease; font-size: 12px; color: var(--text-muted); }
+.faq-item.open .faq-arrow { transform: rotate(45deg); background: var(--accent-glow); color: var(--accent); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+.faq-item.open .faq-answer { max-height: 300px; padding: 0 16px 16px; }
+
+/* ═══ FINAL CTA ═══ */
+.cta-final { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,164,75,0.07) 0%, transparent 70%), var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 40px 0; }
+.cta-final-inner { text-align: center; }
+.cta-final-urgency { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--danger); background: rgba(248,113,113,0.1); padding: 7px 16px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.03em; animation: pulse-dot 2s infinite; }
+.cta-final-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; line-height: 1.2; margin-bottom: 8px; }
+.cta-final-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 22px; }
+.cta-final-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; max-width: 340px; padding: 15px 30px; font-family: var(--font-body); font-size: 15px; font-weight: 700; color: #0a0a0a; background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent) 60%, var(--accent-amber) 100%); border: none; border-radius: 100px; cursor: pointer; box-shadow: 0 4px 24px rgba(201,164,75,0.25); transition: var(--transition-fast); text-decoration: none; letter-spacing: 0.02em; }
+.cta-final-btn:active { transform: scale(0.96); }
+
+/* ═══ CERTIFICATIONS ═══ */
+.cert-bar { padding: 18px 0; }
+.cert-items { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.cert-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text-muted); font-weight: 500; }
+
+/* ═══ FOOTER ═══ */
+.footer { padding: 26px 0 16px; text-align: center; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 12px; }
+.footer-link { font-size: 11px; color: var(--text-muted); text-decoration: none; transition: var(--transition-fast); }
+.footer-link:active { color: var(--accent-soft); }
+.footer-copy { font-size: 10px; color: var(--text-muted); opacity: 0.5; }
+
+/* ═══ FLOATING BAR ═══ */
+.float-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; padding: 10px 16px; padding-bottom: max(10px, env(safe-area-inset-bottom, 10px)); background: rgba(10, 10, 10, 0.92); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-top: 1px solid var(--border-subtle); }
+.float-bar-inner { display: flex; align-items: center; gap: 14px; max-width: 460px; margin: 0 auto; }
+.float-bar-info { flex: 1; min-width: 0; }
+.float-bar-label { font-size: 14px; font-weight: 700; color: var(--accent-bright); }
+.float-bar-stock { font-size: 10px; color: var(--text-muted); margin-top: 1px; }
+.float-bar-btn-wrap { position: relative; flex-shrink: 0; }
+.float-bar-btn { position: relative; z-index: 2; padding: 14px 28px; font-family: var(--font-body); font-size: 14px; font-weight: 700; color: #0a0a0a; background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent) 60%, var(--accent-amber) 100%); border: none; border-radius: 100px; cursor: pointer; box-shadow: 0 2px 20px rgba(201,164,75,0.28); transition: var(--transition-fast); text-decoration: none; text-align: center; letter-spacing: 0.03em; white-space: nowrap; animation: btn-breathe 2s ease-in-out infinite; }
+@keyframes btn-breathe { 0%, 100% { box-shadow: 0 2px 18px rgba(201,164,75,0.25), 0 0 0 0 rgba(201,164,75,0.4); transform: scale(1); } 50% { box-shadow: 0 4px 32px rgba(201,164,75,0.5), 0 0 0 12px rgba(201,164,75,0); transform: scale(1.03); } }
+.float-bar-btn:active { transform: scale(0.94); animation: none; }
+
+/* ═══ ANIMATIONS ═══ */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (min-width: 480px) { .container { padding: 0 20px; } .product-grid { gap: 14px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } .product-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } .hero-title { font-size: 46px; } .section-title { font-size: 32px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><span class="nav-logo-dot"></span></div>
+    <button class="nav-cta k2-target" onclick="k2()">Inquire Now →</button>
+  </div>
+</nav>
+
+<!-- ═══ COUNTDOWN ═══ -->
+<div class="countdown-bar">
+  <div class="countdown-inner">
+    <span class="countdown-label"><span class="countdown-label-icon">🔥</span>Flash Sale</span>
+    <div class="countdown-digits">
+      <span class="countdown-digit" id="cd-h">00</span><span class="countdown-sep">:</span>
+      <span class="countdown-digit" id="cd-m">00</span><span class="countdown-sep">:</span>
+      <span class="countdown-digit" id="cd-s">00</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-ambient"></div>
+  <div class="container hero-content">
+    <div class="hero-badge"><span class="hero-badge-dot"></span> Finally, Something Different</div>
+    <h1 class="hero-title">So Real, You'll<br><span class="hero-title-accent">Forget</span> She Isn't</h1>
+    <p class="hero-subtitle">Touch her. Hold her. Feel the 37°C warmth. Handcrafted from medical-grade platinum silicone with zero oil and zero odor — because you deserve more than a plastic toy.</p>
+    <button class="hero-cta-primary k2-target" onclick="k2()">Meet Your Companion →</button>
+    <div class="hero-tags">
+      <div class="hero-tag">🛡️ FDA Certified</div>
+      <div class="hero-tag">📋 SGS Tested</div>
+      <div class="hero-tag">📦 Discreet Shipping</div>
+      <div class="hero-tag">⭐ 5-Year Warranty</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item"><div class="trust-value">5,800<span style="font-size:13px;">+</span></div><div class="trust-label">Happy Customers</div></div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><div class="trust-value">98.6<span style="font-size:13px;">%</span></div><div class="trust-label">Satisfaction</div></div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><div class="trust-value">57</div><div class="trust-label">Joints</div></div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><div class="trust-value">5<span style="font-size:13px;">yr</span></div><div class="trust-label">Warranty</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAIN POINTS ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" style="color:#F87171;">The Problem</span>
+      <h2 class="section-title">3 Reasons You Hate<br>Regular Dolls</h2>
+    </div>
+    <div class="pain-cards">
+      <div class="pain-card fade-up">
+        <div class="pain-icon">✕</div>
+        <div>
+          <div class="pain-title">Greasy TPE That Smells Like Chemicals</div>
+          <div class="pain-desc">Most dolls use industrial TPE loaded with mineral oil. They leak grease, feel sticky, and smell like a tire factory. Some even cause skin irritation.</div>
+          <div class="pain-sub">→ Cheap industrial TPE with zero safety standards</div>
+        </div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-icon">✕</div>
+        <div>
+          <div class="pain-title">Fake, Plastic Look & Stiff Joints</div>
+          <div class="pain-desc">Single-layer spray paint that peels in weeks. Stiff wire joints that snap. Looks like a mannequin, feels like a plastic toy. Zero realism.</div>
+          <div class="pain-sub">→ Mass-produced with no craftsmanship</div>
+        </div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-icon">✕</div>
+        <div>
+          <div class="pain-title">Embarrassing Packaging & Zero Support</div>
+          <div class="pain-desc">Product details printed right on the shipping label. When something goes wrong, there's nobody to call. No returns, no warranty, no help.</div>
+          <div class="pain-sub">→ Privacy violated + zero after-sales support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE SOLUTION ═══ -->
+<section class="section" style="padding-top:8px;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">The Solution</span>
+      <h2 class="section-title">What Makes Us<br>Different</h2>
+      <p class="section-desc">We redefined what a premium doll should be</p>
+    </div>
+    <div class="solution-cards">
+      <div class="solution-card fade-up">
+        <div class="solution-icon">✓</div>
+        <div>
+          <div class="solution-title">Medical-Grade Platinum Silicone · Zero Oil</div>
+          <div class="solution-desc">FDA & SGS dual-certified. Zero mineral oil. Never leaks, never smells, never deforms. Feels warm and smooth — just like real skin.</div>
+          <div class="solution-highlight">FDA 21 CFR 177.2600 · SGS Cert. No. BJT254136</div>
+        </div>
+      </div>
+      <div class="solution-card fade-up sol-teal">
+        <div class="solution-icon">✓</div>
+        <div>
+          <div class="solution-title">7-Layer Hand-Painted Finish · Hyper-Realistic</div>
+          <div class="solution-desc">10-year veteran artisans hand-paint every inch. Base → Skintone → Veins → Texture → Seal. Realistic blush, veins, and pore detail that holds up under a magnifying glass.</div>
+          <div class="solution-highlight">2,000+ hours of painting craftsmanship perfected</div>
+        </div>
+      </div>
+      <div class="solution-card fade-up">
+        <div class="solution-icon">✓</div>
+        <div>
+          <div class="solution-title">304 Stainless Steel Skeleton · 57 Joints</div>
+          <div class="solution-desc">Medical-grade stainless steel. 57 articulated joints. 100,000-cycle fatigue tested. Adjustable tension. Pose naturally in any position — and hold it.</div>
+          <div class="solution-highlight">100K fatigue cycles passed · Fully adjustable tension</div>
+        </div>
+      </div>
+      <div class="solution-card fade-up sol-purple">
+        <div class="solution-icon">✓</div>
+        <div>
+          <div class="solution-title">37°C Smart Heating · No More Cold Touch</div>
+          <div class="solution-desc">Built-in heating module warms to body temperature. App-controlled. Heats up in 10 minutes. Feel real warmth even on winter nights. Optional add-on.</div>
+          <div class="solution-highlight">App-controlled · 10-min heat-up · Low-voltage safety</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUCTS ═══ -->
+<section class="section" style="padding-top:16px;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">The Collection</span>
+      <h2 class="section-title">Explore the Collection</h2>
+      <p class="section-desc">From entry to flagship — every piece is a masterpiece</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card fade-up k2-target" onclick="k2()">
+        <div class="product-img-wrap">
+          <img class="product-img" src="img/1.jpg" alt="Grace Series" loading="lazy" onerror="this.style.display='none'">
+          <div class="product-img-overlay"></div>
+          <span class="product-badge badge-hot">Bestseller</span>
+          <span class="product-stock">🔥 Only 27 left</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Grace Series · Real Touch</div>
+          <div class="product-price-row"><span class="product-price">$3,199</span><span class="product-price-original">$3,999</span></div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="product-rating-num">4.9</span><span class="product-sold">2.3k sold</span></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up k2-target" onclick="k2()">
+        <div class="product-img-wrap">
+          <img class="product-img" src="img/2.jpg" alt="Phantom Series" loading="lazy" onerror="this.style.display='none'">
+          <div class="product-img-overlay"></div>
+          <span class="product-badge badge-new">New</span>
+          <span class="product-stock">⚡ Only 12 left</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Phantom Series · Luxe</div>
+          <div class="product-price-row"><span class="product-price">$3,499</span><span class="product-price-original">$4,299</span></div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="product-rating-num">5.0</span><span class="product-sold">876 sold</span></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up k2-target" onclick="k2()">
+        <div class="product-img-wrap">
+          <img class="product-img" src="img/3.webp" alt="Bespoke Series" loading="lazy" onerror="this.style.display='none'">
+          <div class="product-img-overlay"></div>
+          <span class="product-badge badge-limited">Custom</span>
+          <span class="product-stock">⏳ Limited slots</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Bespoke Series · Custom</div>
+          <div class="product-price-row"><span class="product-price">$3,479</span><span class="product-price-original">$4,199</span></div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="product-rating-num">4.9</span><span class="product-sold">512 sold</span></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up k2-target" onclick="k2()">
+        <div class="product-img-wrap">
+          <img class="product-img" src="img/4.webp" alt="Petite Series" loading="lazy" onerror="this.style.display='none'">
+          <div class="product-img-overlay"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Petite Series · Mini</div>
+          <div class="product-price-row"><span class="product-price">$2,999</span><span class="product-price-original">$3,499</span></div>
+          <div class="product-rating"><span class="stars">★★★★<span style="color:#555;">★</span></span><span class="product-rating-num">4.7</span><span class="product-sold">1.6k sold</span></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up k2-target" onclick="k2()">
+        <div class="product-img-wrap">
+          <img class="product-img" src="img/5.webp" alt="Classic Series" loading="lazy" onerror="this.style.display='none'">
+          <div class="product-img-overlay"></div>
+          <span class="product-badge badge-hot">Popular</span>
+          <span class="product-stock">🔥 Only 35 left</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Classic Series · Timeless</div>
+          <div class="product-price-row"><span class="product-price">$3,099</span><span class="product-price-original">$3,799</span></div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="product-rating-num">4.8</span><span class="product-sold">3.1k sold</span></div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up k2-target" onclick="k2()">
+        <div class="product-img-wrap">
+          <img class="product-img" src="img/6.jpg" alt="Flagship Series" loading="lazy" onerror="this.style.display='none'">
+          <div class="product-img-overlay"></div>
+          <span class="product-badge badge-new">Flagship</span>
+          <span class="product-stock">👑 Only 8 left</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Apex Series · Ultimate</div>
+          <div class="product-price-row"><span class="product-price">$3,499</span><span class="product-price-original">$4,499</span></div>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="product-rating-num">5.0</span><span class="product-sold">328 sold</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ COMPARISON ═══ -->
+<section class="section" style="padding-top:12px;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">No Comparison, No Truth</span>
+      <h2 class="section-title">Us vs The Rest</h2>
+    </div>
+    <div class="compare-wrap">
+      <div class="compare-header">
+        <div class="compare-feature">Feature</div>
+        <div class="compare-silkmate">Our Dolls</div>
+        <div class="compare-other">Regular TPE</div>
+      </div>
+      <div class="compare-row"><div class="compare-feature">Material</div><div class="compare-silkmate">✓ Medical platinum silicone · Zero oil</div><div class="compare-other">✗ Industrial TPE · Greasy & smelly</div></div>
+      <div class="compare-row"><div class="compare-feature">Paint</div><div class="compare-silkmate">✓ 7-layer hand-painted · Realistic skin</div><div class="compare-other">✗ Single-layer or none · Plastic look</div></div>
+      <div class="compare-row"><div class="compare-feature">Skeleton</div><div class="compare-silkmate">✓ 304 stainless steel · 57 joints</div><div class="compare-other">✗ Cheap wire/alloy · Breaks easily</div></div>
+      <div class="compare-row"><div class="compare-feature">Heating</div><div class="compare-silkmate">✓ 37°C smart heating (optional)</div><div class="compare-other">✗ None</div></div>
+      <div class="compare-row"><div class="compare-feature">Customization</div><div class="compare-silkmate">✓ Full bespoke customization</div><div class="compare-other">✗ Pre-set models only</div></div>
+      <div class="compare-row"><div class="compare-feature">Warranty</div><div class="compare-silkmate">✓ 5-year · Discreet packaging</div><div class="compare-other">✗ Short or none · Generic box</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GUARANTEE ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Zero Risk</span>
+      <h2 class="section-title">Buy With Confidence</h2>
+    </div>
+    <div class="guarantee-cards">
+      <div class="guarantee-card fade-up">
+        <div class="guarantee-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <div><div class="guarantee-title">100% Quality Inspection</div><div class="guarantee-desc">Every doll undergoes a 47-point quality check before shipping. We photograph your actual product and send you the photos for approval. If anything isn't perfect, we remake it — no questions asked.</div></div>
+      </div>
+      <div class="guarantee-card fade-up">
+        <div class="guarantee-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="13" x2="19" y2="13"/></svg></div>
+        <div><div class="guarantee-title">Pay on Delivery · Inspect First</div><div class="guarantee-desc">Open the box and inspect before you pay. If it's not perfect, don't accept it. Available in select regions.</div></div>
+      </div>
+      <div class="guarantee-card fade-up">
+        <div class="guarantee-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+        <div><div class="guarantee-title">Free Replacement for Defects</div><div class="guarantee-desc">Any quality issue upon arrival? Send us a photo and we'll ship a replacement immediately. No arguing, no delays.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS CAROUSEL ═══ -->
+<section class="section" style="padding-top:8px;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Real Reviews</span>
+      <h2 style="font-family:var(--font-body);font-size:22px;font-weight:700;letter-spacing:-0.01em;">What 5,800+ Customers Say</h2>
+    </div>
+    <div class="reviews-carousel" id="reviewsCarousel">
+      <div class="reviews-track" id="reviewsTrack">
+
+        <div class="review-slide">
+          <img class="review-slide-avatar" src="img/a/c1.jpg" alt="James L." loading="lazy" onerror="this.style.display='none'">
+          <div class="stars review-slide-stars">★★★★★</div>
+          <p class="review-slide-text">"Absolutely blown away by the quality. The skin texture is incredibly realistic — no oily residue, no chemical smell at all. The 57 joints pose so naturally. Customer service was outstanding throughout."</p>
+          <div class="review-slide-name">James L.</div>
+          <div class="review-slide-meta">New York · Verified Buyer</div>
+          <div class="review-slide-product">Grace Series</div>
+        </div>
+
+        <div class="review-slide rv-teal">
+          <img class="review-slide-avatar" src="img/a/c2.jpg" alt="Michael W." loading="lazy" onerror="this.style.display='none'">
+          <div class="stars review-slide-stars">★★★★★</div>
+          <p class="review-slide-text">"The custom order process was incredible. I specified every detail — height, body type, facial features — and their sculptor sent 3D previews at every stage. The 37°C heating module is a game-changer."</p>
+          <div class="review-slide-name">Michael W.</div>
+          <div class="review-slide-meta">Los Angeles · Verified Buyer</div>
+          <div class="review-slide-product">Bespoke Series</div>
+        </div>
+
+        <div class="review-slide rv-purple">
+          <img class="review-slide-avatar" src="img/a/c3.jpg" alt="David Z." loading="lazy" onerror="this.style.display='none'">
+          <div class="stars review-slide-stars">★★★★<span style="color:#555;">★</span></div>
+          <p class="review-slide-text">"Got the Petite Series as my first doll. For the price, the quality is exceptional. No smell at all — huge difference from the TPE doll I returned. The discreet packaging was perfect."</p>
+          <div class="review-slide-name">David Z.</div>
+          <div class="review-slide-meta">Chicago · Verified Buyer</div>
+          <div class="review-slide-product">Petite Series</div>
+        </div>
+
+        <div class="review-slide rv-amber">
+          <img class="review-slide-avatar" src="img/a/c4.jpg" alt="Chris T." loading="lazy" onerror="this.style.display='none'">
+          <div class="stars review-slide-stars">★★★★★</div>
+          <p class="review-slide-text">"The Apex Series is truly next-level. The 7-layer paint job is visible up close — you can see veins and subtle skin tone variations. 8 months in and still looks brand new. This is premium craftsmanship."</p>
+          <div class="review-slide-name">Chris T.</div>
+          <div class="review-slide-meta">Miami · Verified Buyer</div>
+          <div class="review-slide-product">Apex Series</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div style="text-align:center;">
+      <div class="review-count-badge">
+        <div class="review-count-avatars">
+          <img src="img/a/c1.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          <img src="img/a/c2.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          <img src="img/a/c3.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          <img src="img/a/c4.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        Join 5,800+ Happy Owners
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section" style="padding-top:8px;">
+  <div class="container">
+    <div class="section-header"><span class="section-tag">FAQ</span><h2 class="section-title">You Might Wonder</h2></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What's the difference between platinum silicone and regular TPE?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer">Platinum silicone is a medical-grade material with FDA & SGS dual certification. It contains zero mineral oil — meaning it never leaks grease, never smells, and never deforms. Regular TPE is an industrial material that continuously leaks oil, has a strong chemical odor, and can cause skin irritation. The difference in feel, safety, and durability is night and day.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">What makes the 57-joint skeleton special?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer">We use a 304 medical-grade stainless steel skeleton with 57 individually articulated joints — fingers, wrists, elbows, shoulders, spine, hips, knees, ankles. It's passed 100,000 fatigue cycles and features adjustable tension. Regular dolls typically have 28–38 joints made from cheap wire or alloy that break and deform over time. Our skeleton is backed by a 5-year warranty.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">Is the 37°C heating safe? How does it work?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer">Yes, completely safe. It uses low-voltage DC 12V power, heats to body temperature in about 10 minutes, and has automatic overheat protection. You control it via a mobile app. The heating module is fully sealed and waterproof. This is an optional add-on — just let us know when you order.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How discreet is the shipping?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer">Double-layer discreet packaging: plain brown outer box with zero branding + inner foam protection. The shipping label says 'Home Decor' or 'Collectible Figurine'. The courier has no idea what's inside. We ship worldwide via DHL/FedEx. Tracking is provided but the contents are never disclosed.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">How long does the 7-layer paint last?<span class="faq-arrow">+</span></button>
+        <div class="faq-answer">Our 7-layer process (Base → Skintone → Veins → Texture → Detail → Seal → Protect) is applied by artisans with 10+ years of experience. With proper care, the finish stays vibrant and intact for 5+ years. Every order includes a detailed care guide and video tutorial. Routine cleaning takes about 15 minutes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<div class="cert-bar">
+  <div class="container">
+    <div class="cert-items">
+      <div class="cert-item">🛡️ FDA Certified</div>
+      <div class="cert-item">📋 SGS Tested</div>
+      <div class="cert-item">🔒 Discreet Shipping</div>
+      <div class="cert-item">⭐ 5-Year Warranty</div>
+      <div class="cert-item">🏭 304 Stainless Steel</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="cta-final">
+  <div class="container cta-final-inner">
+    <h2 class="cta-final-title">Experience True<br>Medical-Grade Quality</h2>
+    <p class="cta-final-desc">Zero oil · Zero odor · 57 joints · 5-year warranty · Discreet shipping</p>
+    <button class="cta-final-btn k2-target" onclick="k2()">Inquire Now →</button>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#" class="footer-link k2-target" onclick="k2()">About Us</a>
+      <a href="#" class="footer-link k2-target" onclick="k2()">Certifications</a>
+      <a href="#" class="footer-link k2-target" onclick="k2()">Privacy Policy</a>
+      <a href="#" class="footer-link k2-target" onclick="k2()">Shipping</a>
+      <a href="#" class="footer-link k2-target" onclick="k2()">Warranty</a>
+    </div>
+    <div class="footer-copy">© 2026. Medical-Grade Platinum Silicone · Real Touch.</div>
+  </div>
+</footer>
+
+<!-- ═══ FLOATING BAR ═══ -->
+<div class="float-bar" id="floatBar">
+  <div class="float-bar-inner">
+    <div class="float-bar-info">
+      <div class="float-bar-label">Save Up To 25%</div>
+      <div class="float-bar-stock">Free shipping · Discreet packaging</div>
+    </div>
+    <div class="float-bar-btn-wrap">
+      <button class="float-bar-btn k2-target" onclick="k2()">Inquire Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+
+(function(){
+  const h=document.getElementById('cd-h'), m=document.getElementById('cd-m'), s=document.getElementById('cd-s');
+  if(!h||!m||!s)return;
+  const end=Date.now()+86400000;
+  function tick(){
+    const left=Math.max(0,end-Date.now());
+    h.textContent=String(Math.floor(left/3600000)).padStart(2,'0');
+    m.textContent=String(Math.floor((left%3600000)/60000)).padStart(2,'0');
+    s.textContent=String(Math.floor((left%60000)/1000)).padStart(2,'0');
+    if(left>0)requestAnimationFrame(()=>setTimeout(tick,1000));
+  }
+  tick();
+})();
+
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item'), isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(b=>b.setAttribute('aria-expanded','false'));
+  if(!isOpen){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+}
+
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+},{threshold:0.12,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+const floatBar=document.getElementById('floatBar');
+const footer=document.querySelector('.footer');
+new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    floatBar.style.opacity=e.isIntersecting?'0':'1';
+    floatBar.style.pointerEvents=e.isIntersecting?'none':'auto';
+    floatBar.style.transition='opacity 0.3s ease';
+  });
+},{threshold:0.1}).observe(footer);
+
+// ── Reviews Carousel ──
+(function(){
+  const track=document.getElementById('reviewsTrack');
+  const dotsContainer=document.getElementById('carouselDots');
+  if(!track||!dotsContainer)return;
+  const slides=track.querySelectorAll('.review-slide');
+  const total=slides.length;
+  let current=0, interval;
+  for(let i=0;i<total;i++){
+    const dot=document.createElement('button');
+    dot.className='carousel-dot'+(i===0?' active':'');
+    dot.setAttribute('aria-label','Review '+(i+1));
+    dot.addEventListener('click',()=>goTo(i));
+    dotsContainer.appendChild(dot);
+  }
+  const dots=dotsContainer.querySelectorAll('.carousel-dot');
+  function goTo(index){ current=index; track.style.transform='translateX(-'+(current*100)+'%)'; dots.forEach((d,i)=>d.classList.toggle('active',i===current)); }
+  function next(){ goTo((current+1)%total); }
+  function startAuto(){ stopAuto(); interval=setInterval(next,2000); }
+  function stopAuto(){ if(interval){ clearInterval(interval); interval=null; } }
+  const carousel=document.getElementById('reviewsCarousel');
+  carousel.addEventListener('touchstart',stopAuto);
+  carousel.addEventListener('touchend',startAuto);
+  carousel.addEventListener('mouseenter',stopAuto);
+  carousel.addEventListener('mouseleave',startAuto);
+  startAuto();
+})();
+
+document.querySelectorAll('.product-img').forEach(img=>{
+  img.addEventListener('error',function(){
+    const wrap=this.closest('.product-img-wrap');
+    if(!wrap||wrap.querySelector('.img-fb'))return;
+    this.style.display='none';
+    const fb=document.createElement('div'); fb.className='img-fb';
+    fb.style.cssText='position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#444;font-size:12px;background:linear-gradient(135deg,#1a1a1a,#222,#1a1a1a);pointer-events:none;';
+    fb.textContent='Product Image'; wrap.appendChild(fb);
+  });
+});
+</script>
+</body>
+</html>
