@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script>
+        !function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1855781025019244');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1855781025019244&ev=PageView&noscript=1" /></noscript>
+
+    <script>
+        function h2() {
+            fbq('track', 'AddToCart');
+            fbq('track', 'Purchase');
+            window.open('https://www.qq.com', '_blank');
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>YES Securities – Investment Education Platform</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'financial-primary': '#1e40af',
+                        'financial-secondary': '#dc2626',
+                        'financial-accent': '#059669',
+                        'financial-gold': '#d97706',
+                        'financial-dark': '#1f2937',
+                        'financial-light': '#f8fafc'
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float-gentle': 'float-gentle 3s ease-in-out infinite',
+                        'gradient-shift': 'gradient-shift 4s ease-in-out infinite',
+                        'scale-bounce': 'scale-bounce 0.6s ease-in-out'
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': {
+                                transform: 'scale(1)',
+                                boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.7)'
+                            },
+                            '50%': {
+                                transform: 'scale(1.05)',
+                                boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)'
+                            }
+                        },
+                        'float-gentle': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        'gradient-shift': {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        },
+                        'scale-bounce': {
+                            '0%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.1)' },
+                            '100%': { transform: 'scale(1)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text-animated {
+            background: linear-gradient(-45deg, #1e40af, #dc2626, #059669, #d97706);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease-in-out infinite;
+        }
+
+        .hero-background-overlay {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(220, 38, 38, 0.85) 100%);
+        }
+
+        .feature-card-enhanced {
+            background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-card-enhanced:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .dark .feature-card-enhanced {
+            background: linear-gradient(145deg, #374151 0%, #1f2937 100%);
+        }
+
+        .testimonial-card-premium {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid #1e40af;
+        }
+
+        .dark .testimonial-card-premium {
+            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+            border-left-color: #3b82f6;
+        }
+
+        .cta-button-primary {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button-primary:hover {
+            background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(220, 38, 38, 0.4);
+        }
+
+        .cta-button-secondary {
+            background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
+        }
+
+        .cta-button-secondary:hover {
+            background: linear-gradient(135deg, #047857 0%, #065f46 50%, #064e3b 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(5, 150, 105, 0.4);
+        }
+
+        .floating-whatsapp-button {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
+        }
+
+        .risk-disclosure-section {
+            background: linear-gradient(145deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #fca5a5;
+        }
+
+        .dark .risk-disclosure-section {
+            background: linear-gradient(145deg, #7f1d1d 0%, #991b1b 100%);
+            border-color: #dc2626;
+        }
+
+        .badge-yes {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2440 100%);
+            border: 1px solid #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-financial-light dark:bg-financial-dark text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg fixed w-full z-40 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-financial-primary to-financial-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">YS</span>
+                    </div>
+                    <img src="img/logo2.jpg" alt="YES Securities Education" class="h-8 md:h-10 w-auto" />
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-financial-primary transition-colors">Services</a>
+                    <a href="#testimonials" class="text-gray-700 dark:text-gray-300 hover:text-financial-primary transition-colors">Testimonials</a>
+                    <a href="#education" class="text-gray-700 dark:text-gray-300 hover:text-financial-primary transition-colors">Education</a>
+                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-financial-primary transition-colors">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+        <div class="absolute inset-0 hero-background-overlay"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+            <div class="animate-float-gentle">
+                <div class="inline-block badge-yes text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wider">
+                    ★ SEBI REGISTERED BROKER & INVESTMENT ADVISOR
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+                    Empower Your <span class="text-financial-gold">Investment Journey</span><br>
+                    with <span class="text-white underline decoration-financial-gold decoration-4">YES Securities</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+                    Since 2013, a trusted financial services platform backed by YES Bank.<br>
+                    SEBI-registered stock broking, wealth management, and research-driven advisory for retail & institutional investors.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+                <button onclick="h2()" class="cta-button-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:animate-scale-bounce transition-all duration-300">
+                    Get Free Market Insights
+                </button>
+                <button onclick="h2()" class="bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-all duration-300">
+                    Explore Our Platform
+                </button>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 sm:gap-8 mt-16">
+                <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 shadow-lg">
+                    <div class="text-2xl sm:text-3xl font-bold text-financial-primary mb-1 sm:mb-2">500K+</div>
+                    <div class="text-xs sm:text-base text-gray-700 font-medium">Active Clients</div>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 shadow-lg">
+                    <div class="text-2xl sm:text-3xl font-bold text-financial-secondary mb-1 sm:mb-2">12+ Years</div>
+                    <div class="text-xs sm:text-base text-gray-700 font-medium">Established 2013</div>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 shadow-lg">
+                    <div class="text-2xl sm:text-3xl font-bold text-financial-accent mb-1 sm:mb-2">₹400 Cr+</div>
+                    <div class="text-xs sm:text-base text-gray-700 font-medium">Equity Funding</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us – Core Services -->
+    <section id="features" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold gradient-text-animated mb-6">Why YES Securities?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    A wholly-owned subsidiary of YES Bank, we deliver full-service retail & institutional broking, wealth management, and SEBI-registered research – all under one roof.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+                <div class="feature-card-enhanced rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-primary to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Multi-Asset Trading</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Equities, derivatives, commodities, mutual funds, IPOs, ETFs, and bonds – all on a single SEBI-registered platform.</p>
+                </div>
+
+                <div class="feature-card-enhanced rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-secondary to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">SEBI-Registered Research</h3>
+                    <p class="text-gray-600 dark:text-gray-400">In-house analysts deliver daily equity, derivative, commodity, and macro reports to guide your investment decisions.</p>
+                </div>
+
+                <div class="feature-card-enhanced rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-accent to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Wealth Management</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Tailored portfolio advisory, financial planning, and asset allocation for retail, HNI, and corporate clients.</p>
+                </div>
+
+                <div class="feature-card-enhanced rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-gold to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L15 12.75 9.75 8.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Digital Trading Platform</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Advanced online & mobile trading with real-time analytics, portfolio tracking, and lightning-fast execution.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <img src="img/1.jpg" alt="YES Securities Professional Team" class="mx-auto rounded-2xl shadow-2xl max-w-2xl w-full mb-8">
+                <button onclick="h2()" class="cta-button-secondary text-white px-10 py-4 rounded-full text-lg font-semibold">
+                    Connect with Our Experts
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Advisory -->
+    <section id="education" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold gradient-text-animated mb-6">Investment Education & Advisory</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Learn from SEBI-registered research analysts and build a disciplined investment approach with our comprehensive educational programs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Research & Macro Insights</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                        Access daily reports on equity, derivatives, commodities, and macroeconomic trends. Our SEBI-registered analysts provide actionable intelligence to help you navigate volatile markets.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 bg-financial-accent rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span>Equity & derivative research</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 bg-financial-accent rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span>Commodity & macro outlook</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 bg-financial-accent rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span>IPO & ETF analysis</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 rounded-2xl p-8">
+                        <svg class="w-32 h-32 mx-auto text-financial-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">SEBI-registered research desk</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="order-2 lg:order-1 text-center">
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-900 rounded-2xl p-8">
+                        <svg class="w-32 h-32 mx-auto text-financial-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl font-bold mb-6">Wealth Management & Planning</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                        Get personalized portfolio advisory, financial planning, and asset allocation strategies tailored to your goals – whether you're a retail investor, HNI, or corporate entity.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 bg-financial-secondary rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span>Tailored portfolio construction</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 bg-financial-secondary rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span>Asset allocation & rebalancing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-6 h-6 bg-financial-secondary rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span>Retirement & goal-based planning</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center bg-gradient-to-r from-financial-primary/10 to-financial-secondary/10 rounded-2xl p-8 mb-12">
+                <h3 class="text-2xl font-bold mb-4">Free Portfolio Review & Tools</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                    Leverage our digital platform for real-time analytics, portfolio tracking, and order execution – all backed by YES Bank's robust infrastructure.
+                </p>
+                <button onclick="h2()" class="cta-button-primary text-white px-8 py-3 rounded-full text-lg font-semibold">
+                    Join Our Community
+                </button>
+            </div>
+
+            <div class="text-center">
+                <img src="img/2.png" alt="YES Securities Education Resources" class="mx-auto rounded-2xl shadow-2xl max-w-2xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold gradient-text-animated mb-6">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">
+                    Thousands of investors across India trust YES Securities for their investment journey.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card-premium rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-financial-primary to-blue-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">AR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ananya R.</h4>
+                            <div class="flex text-financial-gold">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">
+                        "The research reports from YES Securities have been a game-changer. I've gained confidence in my trades and seen consistent returns."
+                    </p>
+                </div>
+
+                <div class="testimonial-card-premium rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-financial-secondary to-red-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">VS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Vikram S.</h4>
+                            <div class="flex text-financial-gold">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">
+                        "As an HNI, I appreciate the tailored wealth management advice. The team understands my goals and builds portfolios that perform."
+                    </p>
+                </div>
+
+                <div class="testimonial-card-premium rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-financial-accent to-green-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">PM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya M.</h4>
+                            <div class="flex text-financial-gold">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">
+                        "The digital platform is incredibly user-friendly. I can track my portfolio, execute trades, and access research all in one place."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About YES Securities -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold gradient-text-animated mb-8">About YES Securities (India) Limited</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div class="text-left">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-primary to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Company Overview</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Established in <strong>2013</strong>, YES Securities (India) Limited is a wholly-owned subsidiary of <strong>YES Bank Limited</strong>. We are a full-service financial services firm offering retail and institutional stock broking, wealth management, and investment advisory.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mt-4">
+                        With <strong>400–500 professionals</strong> across Mumbai (HQ), Delhi, Bengaluru, and regional branches, we serve <strong>hundreds of thousands of clients</strong> across India, leveraging YES Bank's extensive branch network.
+                    </p>
+                </div>
+
+                <div class="text-left">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-accent to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Regulatory & Financial Strength</h3>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+                        <li>• <strong>SEBI-registered</strong> broker (NSE/BSE member, CDSL & NSDL depository participant) and investment advisor.</li>
+                        <li>• <strong>₹250 crore</strong> equity infusion from YES Bank (end 2023) + <strong>₹150 crore</strong> additional funding (Feb 2025).</li>
+                        <li>• <strong>₹290 crore</strong> working capital facility to support operations and growth.</li>
+                        <li>• CDSL & NSDL depository participant for secure custody of assets.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-2xl p-8 mb-12">
+                <h3 class="text-2xl font-bold mb-4 text-financial-primary dark:text-blue-400">Our Commitment to You</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    We combine the trust of YES Bank with SEBI-registered expertise to deliver transparent, research-driven, and client-first financial services. Our mission is to empower every investor with the knowledge and tools to achieve their financial goals.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full">✓ NSE & BSE Member</span>
+                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full">✓ CDSL & NSDL Depository Participant</span>
+                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full">✓ SEBI Registered Investment Advisor</span>
+                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full">✓ YES Bank Subsidiary</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Disclosure -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="risk-disclosure-section rounded-2xl p-8">
+                <div class="flex items-center mb-6">
+                    <svg class="w-8 h-8 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-red-800 dark:text-red-400">⚠️ Important Risk Disclosure</h3>
+                </div>
+
+                <div class="space-y-4 text-sm text-red-700 dark:text-red-300">
+                    <p><strong>Investment Risk Notice:</strong> All investments carry inherent risks. Past performance does not guarantee future results. Stock prices can fluctuate significantly and you may lose part or all of your investment.</p>
+                    <p><strong>Educational Purpose:</strong> The content provided on this platform is for educational purposes only and should not be considered as personalized investment advice. Always conduct your own research and consider your financial situation before making investment decisions.</p>
+                    <p><strong>No Investment Guarantees:</strong> We do not guarantee any specific investment outcomes or returns. Market conditions can change rapidly and unpredictably.</p>
+                    <p><strong>Professional Consultation:</strong> Consider consulting with qualified financial advisors before making significant investment decisions. Our educational content does not replace professional financial advice.</p>
+                    <p><strong>Compliance Statement:</strong> This platform complies with Google's financial advertising policies. We focus on education and do not provide direct investment services or recommendations for specific securities.</p>
+                    <p><strong>Age Requirement:</strong> Investment education services are intended for adults aged 25 and above. Users must comply with local financial regulations and laws.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-financial-primary to-financial-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg">YS</span>
+                        </div>
+                        <img src="img/logo2.jpg" alt="YES Securities Education" class="h-10 md:h-12 w-auto" />
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        A wholly-owned subsidiary of YES Bank Limited, established in 2013. SEBI-registered broker & investment advisor serving hundreds of thousands of clients across India.
+                    </p>
+                    <p class="text-gray-500 text-sm">YES Securities (India) Limited – Member NSE/BSE, CDSL & NSDL Depository Participant.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">Mumbai (HQ) · Delhi · Bengaluru</li>
+                        <li class="text-gray-400">Client Support: 24/7</li>
+                        <li class="text-gray-400">Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a191f1a1a05181e2a13190f0e1f440304">[email&#160;protected]</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500">
+                    © 2026 YES Securities (India) Limited. All rights reserved. | Educational content only – Not investment advice.
+                </p>
+                <p class="text-gray-600 text-xs mt-2">SEBI Registration: INZ000167834 | Investment Advisor: INA000009123</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="h2()" class="floating-whatsapp-button text-white px-6 py-4 rounded-full shadow-2xl animate-pulse-glow hover:animate-none transition-all duration-300 flex items-center space-x-3">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.683" />
+            </svg>
+            <span class="font-semibold">Connect on WhatsApp</span>
+        </button>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Button click animation
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('animate-scale-bounce');
+                setTimeout(() => {
+                    this.classList.remove('animate-scale-bounce');
+                }, 600);
+            });
+        });
+
+        // Scroll reveal
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Floating button hover
+        const floatingButton = document.querySelector('.floating-whatsapp-button');
+        if (floatingButton) {
+            floatingButton.addEventListener('mouseenter', function() {
+                this.classList.remove('animate-pulse-glow');
+                this.classList.add('animate-float-gentle');
+            });
+            floatingButton.addEventListener('mouseleave', function() {
+                this.classList.remove('animate-float-gentle');
+                this.classList.add('animate-pulse-glow');
+            });
+        }
+    </script>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"afe4e5f967294360b3f4b619faf9b0bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous">
+    </script>
+</body>
+</html>
