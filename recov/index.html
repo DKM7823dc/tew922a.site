@@ -195,88 +195,111 @@
 
 <!-- ========== HERO SECTION ========== -->
 <section class="relative min-h-screen flex items-center pt-16 md:pt-20 overflow-hidden hero-gradient">
-    <!-- 背景图 - 已恢复 -->
+    <!-- 背景图 -->
     <div class="hero-bg-image">
         <img src="https://www.yud819ad.site/uswq/img/6.webp" alt="Hero Background" />
     </div>
     <div class="hero-bg-overlay"></div>
     <div class="absolute inset-0 grid-bg opacity-[0.03] z-[1]"></div>
 
-    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 grid lg:grid-cols-2 gap-8 md:gap-16 items-center w-full">
-        <!-- Left -->
-        <div>
-            <div class="inline-flex items-center gap-2 bg-blue-600/15 border border-blue-500/30 rounded-full px-3 py-1.5 md:px-4 md:py-2 text-blue-300 text-[10px] md:text-xs font-semibold mb-4 md:mb-8 uppercase tracking-wider">
-                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                Trusted by Victims Worldwide
+    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 w-full">
+        <!-- 桌面端：左右两栏布局 -->
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+            <!-- Left -->
+            <div>
+                <div class="inline-flex items-center gap-2 bg-blue-600/15 border border-blue-500/30 rounded-full px-3 py-1.5 md:px-4 md:py-2 text-blue-300 text-[10px] md:text-xs font-semibold mb-4 md:mb-8 uppercase tracking-wider">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    Trusted by Victims Worldwide
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.1] md:leading-[1.05] mb-4 md:mb-7">
+                    <span class="text-slate-100">We Fight Alongside</span><br>
+                    <span class="gradient-text">Every Victim</span><br>
+                    <span class="text-slate-100">Until Fraud Is</span><br>
+                    <span class="text-blue-400">Eradicated<sup class="text-xl md:text-2xl">®</sup></span>
+                </h1>
+
+                <p class="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed mb-6 md:mb-10 max-w-lg">
+                    Specializing in cyber fraud, communication fraud, investment scams, and all types of fraud and rights protection cases. We provide rapid responses and efficient accountability to safeguard your legal interests and assist in recovering losses.
+                </p>
+
+                <div class="flex flex-wrap gap-3 md:gap-4">
+                    <button onclick="openModal()"
+                    class="group flex items-center justify-center gap-2 md:gap-3 bg-blue-600 hover:bg-blue-500 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-2xl text-sm sm:text-base font-bold transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:-translate-y-1 whitespace-nowrap">
+                    <i class="fas fa-search-dollar"></i>
+                    <span>Get Free Consultation</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
             </div>
 
-            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.1] md:leading-[1.05] mb-4 md:mb-7">
-                <span class="text-slate-100">We Fight Alongside</span><br>
-                <span class="gradient-text">Every Victim</span><br>
-                <span class="text-slate-100">Until Fraud Is</span><br>
-                <span class="text-blue-400">Eradicated<sup class="text-xl md:text-2xl">®</sup></span>
-            </h1>
-
-            <p class="text-slate-200 text-base sm:text-lg md:text-xl leading-relaxed mb-6 md:mb-10 max-w-lg">
-                Specializing in cyber fraud, communication fraud, investment scams, and all types of fraud and rights protection cases. We provide rapid responses and efficient accountability to safeguard your legal interests and assist in recovering losses.
-            </p>
-
-            <div class="flex flex-wrap gap-3 md:gap-4">
-                <button onclick="openModal()"
-                class="group flex items-center justify-center gap-2 md:gap-3 bg-blue-600 hover:bg-blue-500 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-2xl text-sm sm:text-base font-bold transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:-translate-y-1 whitespace-nowrap">
-                <i class="fas fa-search-dollar"></i>
-                <span>Get Free Consultation</span>
-                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-            </button>
+            <!-- Stats -->
+            <div class="mt-8 md:mt-14 grid grid-cols-3 gap-4 md:gap-6 pt-6 md:pt-10 border-t border-slate-800">
+                <div>
+                    <p class="text-xl md:text-3xl font-black text-blue-400">$1B+</p>
+                    <p class="text-slate-400 text-[10px] md:text-xs mt-0.5 md:mt-1 font-medium uppercase tracking-wider">Assets Recovered</p>
+                </div>
+                <div>
+                    <p class="text-xl md:text-3xl font-black text-blue-400">20+</p>
+                    <p class="text-slate-400 text-[10px] md:text-xs mt-0.5 md:mt-1 font-medium uppercase tracking-wider">Jurisdictions</p>
+                </div>
+                <div>
+                    <p class="text-xl md:text-3xl font-black text-blue-400">500+</p>
+                    <p class="text-slate-400 text-[10px] md:text-xs mt-0.5 md:mt-1 font-medium uppercase tracking-wider">Cases Resolved</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Stats -->
-        <div class="mt-8 md:mt-14 grid grid-cols-3 gap-4 md:gap-6 pt-6 md:pt-10 border-t border-slate-800">
-            <div>
-                <p class="text-xl md:text-3xl font-black text-blue-400">$1B+</p>
-                <p class="text-slate-400 text-[10px] md:text-xs mt-0.5 md:mt-1 font-medium uppercase tracking-wider">Assets Recovered</p>
+        <!-- Right Image - 桌面端显示 -->
+        <div class="relative hidden lg:block">
+            <div class="relative rounded-3xl overflow-hidden glow-blue">
+                <img src="https://www.yud819ad.site/uswq/img/6.webp" alt="Asset Recovery"
+                class="w-full aspect-[1/1] object-cover"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             </div>
-            <div>
-                <p class="text-xl md:text-3xl font-black text-blue-400">20+</p>
-                <p class="text-slate-400 text-[10px] md:text-xs mt-0.5 md:mt-1 font-medium uppercase tracking-wider">Jurisdictions</p>
+            <div class="absolute top-6 left-6 bg-slate-900/95 backdrop-blur border border-slate-700 rounded-2xl p-4 shadow-xl">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-green-500/15 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold text-sm">Case Resolved</p>
+                        <p class="text-green-400 text-xs">$90M Ponzi Scheme</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p class="text-xl md:text-3xl font-black text-blue-400">500+</p>
-                <p class="text-slate-400 text-[10px] md:text-xs mt-0.5 md:mt-1 font-medium uppercase tracking-wider">Cases Resolved</p>
+            <div class="absolute bottom-6 right-6 bg-slate-900/95 backdrop-blur border border-slate-700 rounded-2xl p-4 shadow-xl">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-500/15 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-globe text-blue-400"></i>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold text-sm">Global Reach</p>
+                        <p class="text-blue-400 text-xs">20+ Jurisdictions</p>
+                    </div>
+                </div>
             </div>
+            <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-600/8 rounded-full blur-3xl pointer-events-none"></div>
         </div>
     </div>
 
-    <!-- Right Image - Square (桌面端显示，手机端隐藏) -->
-    <div class="relative hidden lg:block">
+    <!-- ========== 移动端图片（手机专用，在grid外部） ========== -->
+    <div class="lg:hidden mt-6 sm:mt-8 w-full max-w-md mx-auto">
         <div class="relative rounded-3xl overflow-hidden glow-blue">
             <img src="https://www.yud819ad.site/uswq/img/6.webp" alt="Asset Recovery"
             class="w-full aspect-[1/1] object-cover"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
         </div>
-        <div class="absolute top-6 left-6 bg-slate-900/95 backdrop-blur border border-slate-700 rounded-2xl p-4 shadow-xl">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-green-500/15 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                </div>
-                <div>
-                    <p class="text-white font-bold text-sm">Case Resolved</p>
-                    <p class="text-green-400 text-xs">$90M Ponzi Scheme</p>
-                </div>
+        <!-- 移动端简洁徽章 -->
+        <div class="flex items-center justify-center gap-6 mt-4 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-400 text-sm"></i>
+                <span>$90M Recovered</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-globe text-blue-400 text-sm"></i>
+                <span>20+ Countries</span>
             </div>
         </div>
-        <div class="absolute bottom-6 right-6 bg-slate-900/95 backdrop-blur border border-slate-700 rounded-2xl p-4 shadow-xl">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-500/15 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-globe text-blue-400"></i>
-                </div>
-                <div>
-                    <p class="text-white font-bold text-sm">Global Reach</p>
-                    <p class="text-blue-400 text-xs">20+ Jurisdictions</p>
-                </div>
-            </div>
-        </div>
-        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-600/8 rounded-full blur-3xl pointer-events-none"></div>
     </div>
 </div>
 
