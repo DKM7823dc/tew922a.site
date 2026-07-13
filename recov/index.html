@@ -965,16 +965,28 @@
     </div>
 </footer>
 
-<!-- ========== MOBILE BOTTOM CTA BUTTON ========== -->
+<!-- ========== MOBILE BOTTOM DOUBLE CTA BUTTONS ========== -->
 <div class="fixed bottom-0 left-0 right-0 z-50 p-2 md:p-3 bg-gradient-to-r from-blue-600 to-blue-500 shadow-2xl block md:hidden">
-    <button onclick="openModal()" class="w-full bg-white text-blue-600 font-bold py-2.5 md:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm md:text-base">
-        <i class="fas fa-headset"></i> Free Consultation
-    </button>
+    <div class="grid grid-cols-2 gap-2">
+        <button onclick="openModal()" 
+                class="w-full bg-white text-blue-600 font-bold py-2.5 md:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base">
+            <i class="fas fa-headset"></i> Free Consultation
+        </button>
+        <button onclick="k3()" 
+                class="w-full bg-white/20 text-white font-bold py-2.5 md:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base border border-white/30 hover:bg-white/30 transition-colors">
+            <i class="fas fa-download"></i> Free Download
+        </button>
+    </div>
 </div>
 
 <script>
     function m1() {
         window.open('https://wa.me/12123', '_blank');
+    }
+
+    // k3 方法 - 跳转百度
+    function k3() {
+        window.open('https://www.baidu.com', '_blank');
     }
 
     function openModal() {
@@ -1010,5 +1022,6 @@
     });
 </script>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"afe4e5f967294360b3f4b619faf9b0bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
