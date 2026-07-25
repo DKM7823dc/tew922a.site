@@ -214,7 +214,6 @@ a{color:inherit;text-decoration:none}
    ============================================================ */
 .hero{
   position:relative;z-index:2;
-  min-height:100vh;min-height:100dvh;
   display:flex;flex-direction:column;justify-content:center;
   padding:20px 16px 60px;
 }
@@ -460,6 +459,40 @@ a{color:inherit;text-decoration:none}
   color:var(--fg-dim);transition:all 0.2s;white-space:nowrap;
 }
 .cat-pill.on{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 4px 16px var(--accent-glow)}
+
+/* ============================================================
+   VARIETY LIST
+   ============================================================ */
+.variety-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.variety-card{
+  display:flex;gap:12px;
+  border-radius:var(--radius);
+  background:var(--bg-card);border:1px solid var(--surface-border);
+  overflow:hidden;transition:all 0.2s var(--ease-out);
+  cursor:pointer;
+}
+.variety-card:active{background:var(--bg-card-hover);border-color:rgba(255,255,255,0.1);transform:scale(0.98)}
+.variety-thumb{
+  width:120px;min-width:120px;height:80px;
+  border-radius:var(--radius-sm);overflow:hidden;
+  margin:8px 0 8px 8px;
+}
+.variety-thumb img{width:100%;height:100%;object-fit:cover}
+.variety-info{
+  flex:1;padding:8px 12px 8px 0;
+  display:flex;flex-direction:column;justify-content:center;gap:4px;
+  min-width:0;
+}
+.variety-title{font-size:0.85rem;font-weight:700;line-height:1.3}
+.variety-desc{font-size:0.6875rem;color:var(--fg-dim);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.variety-meta{display:flex;align-items:center;gap:6px;font-size:0.6875rem;color:var(--fg-muted)}
+.variety-tag{
+  display:inline-block;padding:2px 7px;border-radius:4px;
+  font-size:0.625rem;font-weight:600;margin-right:4px;
+  background:rgba(225,29,72,0.12);color:var(--accent);
+}
+.variety-tag.purple{background:rgba(124,58,237,0.12);color:var(--accent-2)}
+.variety-tag.gold{background:rgba(234,179,8,0.12);color:var(--gold)}
 
 /* ============================================================
    LIVE STATS BAR
@@ -1012,7 +1045,73 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============================================================
-     SCREEN 3: FEATURES
+     SCREEN 3: VARIETY / BARAETI
+     ============================================================ -->
+<section class="section reveal" style="padding-top:8px">
+  <span class="section-label" data-i18n="variety_label">日本のバラエティ</span>
+  <h2 class="section-title"><span data-i18n="variety_h_a">日本＆アジア</span><br><span data-i18n="variety_h_b">人気バラエティ</span></h2>
+  <p class="section-sub" style="margin-bottom:14px" data-i18n="variety_sub">見逃せない話題の番組をチェック</p>
+
+  <div class="variety-list">
+    <!-- Card 1 -->
+    <div class="variety-card" onclick="k2()">
+      <div class="variety-thumb"><img src="img/s1.jpg" alt="月曜から夜ふかし" loading="lazy"></div>
+      <div class="variety-info">
+        <div class="variety-title">月曜から夜ふかし</div>
+        <div class="variety-desc">街頭インタビューで庶民の珍回答を掘り起こす深夜の傑作。松子デラックスの毒舌ツッコミと村上信五の掛け合いが爆笑必至。</div>
+        <div class="variety-meta"><span>日本テレビ</span><span>·</span><span>月曜 23:59</span></div>
+        <div><span class="variety-tag">街ブラ</span><span class="variety-tag purple">脱力系</span></div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="variety-card" onclick="k2()">
+      <div class="variety-thumb"><img src="img/s2.png" alt="水曜どうでしょう" loading="lazy"></div>
+      <div class="variety-info">
+        <div class="variety-title">水曜どうでしょう</div>
+        <div class="variety-desc">低予算×高クリエイティブの伝説的番組。鈴井貴之と大泉洋が全国各地で荒唐無稽なミッションに挑む、色褪せない名作。</div>
+        <div class="variety-meta"><span>北海道テレビ</span><span>·</span><span>水曜 23:00</span></div>
+        <div><span class="variety-tag gold">伝説</span><span class="variety-tag">旅</span></div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="variety-card" onclick="k2()">
+      <div class="variety-thumb"><img src="img/s3.jpg" alt="Golden SixTONES" loading="lazy"></div>
+      <div class="variety-info">
+        <div class="variety-title">Golden SixTONES</div>
+        <div class="variety-desc">人気グループSixTONES初の冠番組。メンバー同士の天然ボケ・即興ツッコミ・イジり合いが生む、リアルな笑い。</div>
+        <div class="variety-meta"><span>テレビ朝日</span><span>·</span><span>金曜 21:00</span></div>
+        <div><span class="variety-tag gold">人気</span><span class="variety-tag purple">トーク</span></div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="variety-card" onclick="k2()">
+      <div class="variety-thumb"><img src="img/s4.jpg" alt="トークサバイバー！" loading="lazy"></div>
+      <div class="variety-info">
+        <div class="variety-title">トークサバイバー！</div>
+        <div class="variety-desc">即興コント×ドラマの斬新融合。千鳥が突然お題を出し、面白くなければ即退場。予測不能の展開がサスペンスと爆笑を往復する。</div>
+        <div class="variety-meta"><span>Netflix</span><span>·</span><span>全話配信中</span></div>
+        <div><span class="variety-tag">お笑い</span><span class="variety-tag purple">ドラマ</span></div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="variety-card" onclick="k2()">
+      <div class="variety-thumb"><img src="img/s5.jpg" alt="ENGEIグランドスラム" loading="lazy"></div>
+      <div class="variety-info">
+        <div class="variety-title">ENGEIグランドスラム</div>
+        <div class="variety-desc">日本トップクラスの芸人が集結する「最も豪華なネタ番組」。2026年は7時間超の生放送で、お笑い界の祭典となった。</div>
+        <div class="variety-meta"><span>フジテレビ</span><span>·</span><span>特番</span></div>
+        <div><span class="variety-tag gold">祭典</span><span class="variety-tag">ネタ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SCREEN 4: FEATURES
      ============================================================ -->
 <section class="section reveal" style="padding-top:8px">
   <span class="section-label" data-i18n="feat_label">Tver の特長</span>
@@ -1341,6 +1440,10 @@ scroll_hint:'Swipe',
 trending_label:'Trending Now',
 trending_h_a:'What the world',
 trending_h_b:'is watching',
+variety_label:'Japanese Variety',
+variety_h_a:'Japan & Asia',
+variety_h_b:'Top Variety Shows',
+variety_sub:"Don't miss the hottest shows",
 trending_sub:'Top picks, updated daily',
 card_hot:'HOT',
 card_new:'NEW',
@@ -1423,6 +1526,10 @@ scroll_hint:'スワイプ',
 trending_label:'トレンド',
 trending_h_a:'世界が',
 trending_h_b:'今見ているもの',
+variety_label:'日本のバラエティ',
+variety_h_a:'日本＆アジア',
+variety_h_b:'人気バラエティ',
+variety_sub:'見逃せない話題の番組をチェック',
 trending_sub:'毎日更新されるトップピック',
 card_hot:'話題',
 card_new:'新着',
