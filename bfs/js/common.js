@@ -1,6 +1,7 @@
 // ===== Shared handlers =====
 function k1(){window.open('https://www.qq.com');}
 function k2(){window.open('https://google.com');}
+function joinNow(){window.open('https://huntershoot.biz/');}
 
 // ===== Nav: hide on scroll down, show on scroll up =====
 (function(){
