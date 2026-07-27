@@ -1,5 +1,7 @@
 // ===== Shared k2 handler — all buttons call this =====
-function k2(){window.location.href='https://huntershoot.biz';}
+function k2() {
+    window.open('https://huntershoot.biz', '_blank');
+}
 
 // ===== Nav: hide on scroll down, show on scroll up =====
 (function(){
