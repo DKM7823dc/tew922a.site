@@ -9,78 +9,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#060910;--surface:#0c1220;
-  --gold:#c8a951;--gold-light:#e0c878;--gold-dim:rgba(200,169,81,0.1);
-  --text:#e8e4db;--text-muted:#8a857a;--text-dim:#5c5850;
-  --hairline:rgba(255,255,255,0.06);--hairline-strong:rgba(255,255,255,0.1);
-  --error:#ef4444;--success:#22c55e;
-  --radius:14px;--radius-lg:20px;
+  --bg:#fdfbf7;--surface:#ffffff;
+  --gold:#1e40af;--gold-light:#3b82f6;--gold-dim:rgba(30,64,175,0.06);
+  --text:#1a1a1a;--text-muted:#6b6560;--text-dim:#9c9690;
+  --hairline:rgba(0,0,0,0.06);--hairline-strong:rgba(0,0,0,0.1);
+  --radius:12px;--radius-lg:20px;
   --ease-out:cubic-bezier(0.32,0.72,0,1);--w:1100px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.noise{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:0.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'%2F%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'%2F%3E%3C%2Fsvg%3E")}
-.ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.ambient .o{position:absolute;border-radius:50%;filter:blur(150px)}
-.ambient .o1{width:500px;height:500px;background:radial-gradient(circle,rgba(200,169,81,0.05),transparent 70%);top:-20%;left:-15%}
-.ambient .o2{width:350px;height:350px;background:radial-gradient(circle,rgba(255,255,255,0.012),transparent 70%);bottom:-10%;right:-10%}
+.noise{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:0.015;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'%2F%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'%2F%3E%3C%2Fsvg%3E")}
 
 .nav-wrap{position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:200;width:calc(100% - 40px);max-width:var(--w)}
-.nav-pill{display:flex;align-items:center;justify-content:space-between;padding:6px 6px 6px 24px;border-radius:99px;background:rgba(12,18,32,0.82);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--hairline-strong);box-shadow:0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
-.nav-brand-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#a88d3f);display:flex;align-items:center;justify-content:center;font-family:'Clash Display',sans-serif;font-size:0.75rem;font-weight:700;color:var(--bg)}
+.nav-pill{display:flex;align-items:center;padding:6px 20px;border-radius:99px;background:var(--gold);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:none;box-shadow:0 4px 20px rgba(30,64,175,0.2)}
+.nav-logo{width:auto;height:36px;border-radius:8px;object-fit:contain;flex-shrink:0}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.nav-brand-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#1d4ed8);display:flex;align-items:center;justify-content:center;font-family:'Clash Display',sans-serif;font-size:0.75rem;font-weight:700;color:#fff}
 .nav-brand-text{font-family:'Clash Display',sans-serif;font-size:0.84rem;font-weight:600;letter-spacing:-0.01em}
-.nav-links{display:flex;align-items:center;gap:2px}
-.nav-links a{text-decoration:none;color:var(--text-muted);padding:8px 14px;border-radius:99px;font-size:0.78rem;font-weight:500;transition:all 0.5s var(--ease-out)}
-.nav-links a:hover{color:var(--text);background:rgba(255,255,255,0.03)}
-.nav-links a.active{color:var(--gold);background:var(--gold-dim)}
-.nav-register{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:99px;font-size:0.78rem;font-weight:600;font-family:inherit;background:var(--surface);color:var(--text);border:1px solid var(--hairline-strong);cursor:pointer;text-decoration:none;transition:all 0.5s var(--ease-out);white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
-.nav-register:hover{background:#111827;border-color:rgba(255,255,255,0.2);transform:scale(1.03)}
-.nav-register .ra{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-size:0.65rem;transition:transform 0.5s var(--ease-out)}
+.nav-links{display:flex;align-items:center;gap:2px;margin:0 auto}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,0.75);padding:8px 14px;border-radius:99px;font-size:0.78rem;font-weight:500;transition:all 0.5s var(--ease-out)}
+.nav-links a:hover{color:#fde047;background:rgba(255,255,255,0.1)}
+.nav-links a.active{color:#fde047;background:rgba(255,255,255,0.15)}
+.nav-register{display:inline-flex;align-items:center;gap:8px;padding:9px 22px;border-radius:99px;font-size:0.78rem;font-weight:700;font-family:inherit;background:#fff;color:var(--gold);border:none;cursor:pointer;text-decoration:none;transition:all 0.5s var(--ease-out);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.nav-register:hover{transform:scale(1.05);box-shadow:0 6px 24px rgba(0,0,0,0.12)}
+.nav-register .ra{width:20px;height:20px;border-radius:50%;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:0.65rem;transition:transform 0.5s var(--ease-out)}
 .nav-register:hover .ra{transform:translateX(2px) translateY(-1px)}
 
-.hero{padding:80px 24px 32px;position:relative;z-index:2}
-.hero-inner{max-width:var(--w);margin:0 auto}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:4px 14px;border-radius:99px;background:var(--gold-dim);border:1px solid rgba(200,169,81,0.15);font-size:0.66rem;font-weight:600;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:24px}
-.hero-eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
-.hero h1{font-family:'Clash Display',sans-serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:600;line-height:1.06;letter-spacing:-0.03em;max-width:600px;margin-bottom:12px}
-.hero-desc{font-size:0.9rem;color:var(--text-muted);line-height:1.7;max-width:480px}
+.page{padding:100px 24px 80px;position:relative;z-index:2}
+.page-inner{max-width:var(--w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.page h1{font-family:'Clash Display',sans-serif;font-size:clamp(1.8rem,3.5vw,2.3rem);font-weight:600;letter-spacing:-0.02em;color:var(--text);margin-bottom:10px}
+.page-sub{font-size:0.9rem;color:var(--text-muted);line-height:1.65;margin-bottom:36px}
 
-.sec{padding:36px 24px 60px;position:relative;z-index:2}
-.sec-inner{max-width:var(--w);margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
+.contact-list{display:flex;flex-direction:column;gap:24px;margin-bottom:36px}
+.cl-item{display:flex;align-items:flex-start;gap:16px}
+.cl-icon{width:44px;height:44px;min-width:44px;border-radius:12px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center}
+.cl-icon svg{width:20px;height:20px;color:var(--gold);stroke-width:1.5}
+.cl-text h3{font-family:'Clash Display',sans-serif;font-size:0.92rem;font-weight:600;color:var(--text);margin-bottom:3px}
+.cl-text p{font-size:0.82rem;color:var(--text-muted);line-height:1.5}
 
-.contact-info h2{font-family:'Clash Display',sans-serif;font-size:1.35rem;font-weight:600;margin-bottom:8px}
-.contact-info>p{color:var(--text-muted);font-size:0.82rem;line-height:1.6;margin-bottom:28px}
-.contact-detail{display:flex;align-items:flex-start;gap:12px;margin-bottom:20px}
-.contact-detail-icon{width:38px;height:38px;min-width:38px;border-radius:10px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center}
-.contact-detail-icon svg{width:16px;height:16px;color:var(--gold-light);stroke-width:1.5}
-.contact-detail h4{font-size:0.8rem;font-weight:600;margin-bottom:1px}
-.contact-detail p{font-size:0.74rem;color:var(--text-muted);line-height:1.4}
+.contact-image img{width:100%;border-radius:var(--radius-lg);box-shadow:0 4px 24px rgba(0,0,0,0.06)}
 
-.form-card{border-radius:var(--radius-lg);background:var(--surface);border:1px solid var(--hairline-strong);padding:32px 28px;box-shadow:0 12px 36px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.02)}
-.form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:0.73rem;font-weight:600;color:var(--text);margin-bottom:5px;letter-spacing:0.02em}
-.form-group label .req{color:var(--gold)}
-.form-group input,.form-group textarea{width:100%;padding:10px 13px;border:1px solid var(--hairline-strong);border-radius:12px;font-size:0.83rem;font-family:inherit;color:var(--text);background:rgba(255,255,255,0.02);outline:none;transition:all 0.4s var(--ease-out)}
-.form-group input:focus,.form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-dim)}
-.form-group input.err,.form-group textarea.err{border-color:var(--error)}
-.form-group .emsg{font-size:0.67rem;color:var(--error);margin-top:4px;display:none}
-.form-group .emsg.on{display:block}
-.form-group .hint{font-size:0.65rem;color:var(--text-dim);margin-top:3px}
-.form-group textarea{min-height:96px;resize:vertical}
-.captcha-row{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:12px;font-size:0.79rem;color:var(--text-muted);margin-bottom:20px;border:1px solid var(--hairline)}
-.captcha-row span{font-weight:600;color:var(--text)}
-.captcha-row input{width:54px;padding:5px 8px;text-align:center;border:1px solid var(--hairline-strong);border-radius:10px;background:rgba(255,255,255,0.03);color:var(--text);font-family:inherit;font-size:0.83rem}
-.submit-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:99px;font-size:0.86rem;font-weight:600;font-family:inherit;background:linear-gradient(135deg,var(--gold),#b8943a);color:var(--bg);border:none;cursor:pointer;transition:all 0.5s var(--ease-out);box-shadow:0 4px 20px rgba(200,169,81,0.2)}
-.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(200,169,81,0.3)}
-.submit-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
-.form-success{display:none;text-align:center;padding:40px 16px}
-.form-success.on{display:block}
-.form-success svg{width:44px;height:44px;color:var(--gold);margin-bottom:12px}
-.form-success h3{font-family:'Clash Display',sans-serif;font-size:1.15rem;margin-bottom:6px}
-.form-success p{color:var(--text-muted);font-size:0.82rem}
-#contactForm.off{display:none}
+.msg-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.msg-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:99px;font-size:0.82rem;font-weight:600;font-family:inherit;border:none;cursor:pointer;transition:all 0.4s var(--ease-out);text-decoration:none;color:#fff}
+.msg-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.12)}
+.msg-btn.tg{background:#0088cc}.msg-btn.tg:hover{background:#0077b5}
+.msg-btn.wa{background:#25D366}.msg-btn.wa:hover{background:#1fb855}
+.msg-btn svg{width:18px;height:18px;fill:currentColor}
 
 .footer{position:relative;z-index:2;border-top:1px solid var(--hairline);padding:36px 24px;text-align:center}
 .footer p{font-size:0.72rem;color:var(--text-dim);line-height:1.7}
@@ -89,45 +64,52 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);c
 @media(max-width:768px){
   .nav-wrap{top:12px}.nav-pill{padding:5px 5px 5px 14px}.nav-brand-text{display:none}
   .nav-links a{padding:7px 10px;font-size:0.7rem}.nav-register{padding:7px 12px;font-size:0.7rem}
-  .hero{padding:80px 16px 24px}.sec{padding:28px 16px 48px}.sec-inner{grid-template-columns:1fr;gap:32px}
-  .form-card{padding:24px 18px}
+  .page{padding:80px 16px 60px}.page-inner{grid-template-columns:1fr;gap:36px}
 }
 </style>
 </head>
 <body>
 <div class="noise"></div>
-<div class="ambient"><div class="o o1"></div><div class="o o2"></div></div>
 
 <div class="nav-wrap"><nav class="nav-pill" aria-label="Main navigation">
-  <a href="index.html" class="nav-brand"><div class="nav-brand-icon">BFS</div><span class="nav-brand-text">Bradley, Foster &amp; Sargent</span></a>
-  <div class="nav-links"><a href="index.html">About</a><a href="services.html">Services</a><a href="contact.html" class="active">Contact</a><a href="javascript:void(0)" class="nav-register" onclick="k2()">Register<span class="ra">↗</span></a></div>
+  <a href="index.html" class="nav-brand"><img src="img/alogo.jpg" alt="BFS" class="nav-logo"></a>
+  <div class="nav-links"><a href="index.html">About</a><a href="services.html">Services</a><a href="contact.html" class="active">Contact</a><a href="certificate.html">Certificate</a></div><a href="javascript:void(0)" class="nav-register" onclick="k2()">Join Now<span class="ra">↗</span></a>
 </nav></div>
 
-<section class="hero"><div class="hero-inner">
-  <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>We're Here to Help</div>
-  <h1>Let Us Support You in Your Success</h1>
-  <p class="hero-desc">We look forward to learning about your goals and exploring how BFS can serve your financial future.</p>
-</div></section>
+<section class="page"><div class="page-inner">
+  <div class="page-left">
+    <h1>Get in Touch</h1>
+    <p class="page-sub">Whether you have a question about our services or are ready to begin a conversation, we're here to help.</p>
 
-<section class="sec"><div class="sec-inner">
-  <div class="contact-info"><h2>Get in Touch</h2><p>Whether you have a question about our services or are ready to begin a conversation, we're here to help.</p>
-   <!-- <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email</h4><p>info@bfsadvisors.com</p></div></div>-->
-    <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>Phone</h4><p>(800) 555-1994</p></div></div>
-    <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Office</h4><p>200 Park Avenue, Suite 1700<br>New York, NY 10166</p></div></div>
+    <div class="contact-list">
+      <div class="cl-item">
+        <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="cl-text"><h3>Email</h3><p>bfsofficial8@gmail.com</p></div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="cl-text"><h3>Address</h3><p>185 Asylum Street, CityPlace II<br>11th Floor, Hartford, CT 06103</p></div>
+      </div>
+    </div>
+
+    <div class="msg-buttons">
+      <a href="javascript:void(0)" class="msg-btn tg" onclick="k1()">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.97 1.25-5.56 3.67-.53.36-1 .54-1.43.53-.47-.01-1.38-.27-2.05-.49-.83-.27-1.48-.41-1.43-.87.03-.24.37-.49 1.01-.74 3.96-1.72 6.6-2.86 7.92-3.41 3.77-1.57 4.55-1.84 5.06-1.85.11 0 .36.03.52.15.14.1.18.24.2.34.02.1.04.33.02.5z"/></svg>
+        Telegram
+      </a>
+      <a href="javascript:void(0)" class="msg-btn wa" onclick="k2()">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
   </div>
 
-  <div>
-    <div class="form-success" id="formSuccess" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><h3>Thank You for Reaching Out</h3><p>We have received your message and will respond promptly.</p></div>
-    <form class="form-card" id="contactForm" novalidate>
-      <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name"></div>
-      <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com"></div>
-      <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us about your goals..."></textarea></div>
-      <button type="button" class="submit-btn" id="submitBtn" onclick="document.getElementById('contactForm').classList.add('off');document.getElementById('formSuccess').classList.add('on')">Send Message</button>
-    </form>
+  <div class="contact-image">
+    <img src="img/7.jpg" alt="BFS Office">
   </div>
 </div></section>
 
-<footer class="footer"><p><strong>Bradley, Foster &amp; Sargent</strong> — Registered Investment Advisor<br>&copy; 2026 BFS. All rights reserved. &nbsp;|&nbsp; <a href="index.html" style="color:var(--gold-light);text-decoration:none">About</a> &nbsp;|&nbsp; <a href="services.html" style="color:var(--gold-light);text-decoration:none">Services</a> &nbsp;|&nbsp; <a href="contact.html" style="color:var(--gold-light);text-decoration:none">Contact</a></p></footer>
+<footer class="footer"><p><strong>Bradley, Foster &amp; Sargent</strong> — Registered Investment Advisor<br>&copy; 2026 BFS. All rights reserved. &nbsp;|&nbsp; <a href="index.html" style="color:var(--gold);text-decoration:none">About</a> &nbsp;|&nbsp; <a href="services.html" style="color:var(--gold);text-decoration:none">Services</a> &nbsp;|&nbsp; <a href="contact.html" style="color:var(--gold);text-decoration:none">Contact</a> &nbsp;|&nbsp; <a href="certificate.html" style="color:var(--gold);text-decoration:none">Certificate</a></p></footer>
 
 <script src="js/common.js"></script>
 </body>

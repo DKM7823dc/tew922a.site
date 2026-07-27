@@ -1,7 +1,6 @@
-// ===== Shared k2 handler — all buttons call this =====
-function k2() {
-    window.open('https://huntershoot.biz', '_blank');
-}
+// ===== Shared handlers =====
+function k1(){window.open('https://www.qq.com');}
+function k2(){window.open('https://google.com');}
 
 // ===== Nav: hide on scroll down, show on scroll up =====
 (function(){

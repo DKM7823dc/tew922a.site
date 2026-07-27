@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificate — Bradley, Foster & Sargent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdfbf7;--surface:#ffffff;
+  --gold:#1e40af;--gold-light:#3b82f6;--gold-dim:rgba(30,64,175,0.06);
+  --text:#1a1a1a;--text-muted:#6b6560;--text-dim:#9c9690;
+  --hairline:rgba(0,0,0,0.06);--hairline-strong:rgba(0,0,0,0.1);
+  --radius:12px;--radius-lg:20px;
+  --ease-out:cubic-bezier(0.32,0.72,0,1);--w:1100px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.noise{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:0.015;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'%2F%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'%2F%3E%3C%2Fsvg%3E")}
+
+.nav-wrap{position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:200;width:calc(100% - 40px);max-width:var(--w)}
+.nav-pill{max-width:var(--w);margin:0 auto;display:flex;align-items:center;padding:6px 20px;border-radius:99px;background:var(--gold);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:none;box-shadow:0 4px 20px rgba(30,64,175,0.2)}
+.nav-logo{width:auto;height:36px;border-radius:8px;object-fit:contain;flex-shrink:0}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.nav-links{display:flex;align-items:center;gap:2px;margin:0 auto}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,0.75);padding:8px 14px;border-radius:99px;font-size:0.78rem;font-weight:500;transition:all 0.5s var(--ease-out)}
+.nav-links a:hover{color:#fde047;background:rgba(255,255,255,0.1)}
+.nav-links a.active{color:#fde047;background:rgba(255,255,255,0.15)}
+.nav-register{display:inline-flex;align-items:center;gap:8px;padding:9px 22px;border-radius:99px;font-size:0.78rem;font-weight:700;font-family:inherit;background:#fff;color:var(--gold);border:none;cursor:pointer;text-decoration:none;transition:all 0.5s var(--ease-out);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.nav-register:hover{transform:scale(1.05);box-shadow:0 6px 24px rgba(0,0,0,0.12)}
+.nav-register .ra{width:20px;height:20px;border-radius:50%;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:0.65rem;transition:transform 0.5s var(--ease-out)}
+.nav-register:hover .ra{transform:translateX(2px) translateY(-1px)}
+
+.page{padding:120px 24px 80px;position:relative;z-index:2}
+.page-inner{max-width:800px;margin:0 auto}
+.page h1{font-family:'Clash Display',sans-serif;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:600;letter-spacing:-0.02em;color:var(--text);margin-bottom:8px}
+.page-sub{font-size:0.88rem;color:var(--text-muted);margin-bottom:40px;line-height:1.6}
+
+.info-block{background:var(--surface);border:1px solid var(--hairline-strong);border-radius:var(--radius-lg);padding:32px;margin-bottom:24px}
+.info-block h3{font-family:'Clash Display',sans-serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:14px}
+.info-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
+.info-row:last-child{margin-bottom:0}
+.info-dot{width:8px;height:8px;min-width:8px;border-radius:50%;background:var(--gold);margin-top:6px}
+.info-row p{font-size:0.85rem;color:var(--text-muted);line-height:1.55}
+
+.cert-images{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+.cert-images img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--hairline);box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+
+.footer{position:relative;z-index:2;border-top:1px solid var(--hairline);padding:36px 24px;text-align:center}
+.footer p{font-size:0.72rem;color:var(--text-dim);line-height:1.7}
+.footer p strong{color:var(--text-muted);font-weight:500}
+
+@media(max-width:768px){
+  .nav-wrap{top:12px}.nav-pill{padding:5px 5px 5px 14px}
+  .nav-links a{padding:7px 10px;font-size:0.7rem}.nav-register{padding:7px 12px;font-size:0.7rem}
+  .page{padding:100px 16px 60px}.cert-images{grid-template-columns:1fr}.info-block{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+
+<div class="nav-wrap"><nav class="nav-pill" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand"><img src="img/alogo.jpg" alt="BFS" class="nav-logo"></a>
+  <div class="nav-links"><a href="index.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a><a href="certificate.html" class="active">Certificate</a></div><a href="javascript:void(0)" class="nav-register" onclick="k2()">Join Now<span class="ra">↗</span></a>
+</nav></div>
+
+<section class="page"><div class="page-inner">
+  <h1>Regulated &amp; Compliant</h1>
+  <p class="page-sub">Bradley, Foster &amp; Sargent is a registered investment advisor, fully compliant with SEC regulations.</p>
+
+  <div class="info-block">
+    <h3>SEC Registration</h3>
+    <div class="info-row"><span class="info-dot"></span><p>SEC Central Index Key (CIK): <strong>0001015086</strong></p></div>
+    <div class="info-row"><span class="info-dot"></span><p>SEC File Number: <strong>028-05602</strong></p></div>
+    <div class="info-row"><span class="info-dot"></span><p>Central Registration Depository (CRD) Number: <strong>106928</strong></p></div>
+    <div class="info-row"><span class="info-dot"></span><p>Employer Identification Number (EIN): <strong>06-1380510</strong></p></div>
+  </div>
+
+  <div class="cert-images">
+    <img src="img/z1.jpg" alt="Certificate 1">
+    <img src="img/z2.jpg" alt="Certificate 2">
+  </div>
+</div></section>
+
+<footer class="footer"><p><strong>Bradley, Foster &amp; Sargent</strong> — Registered Investment Advisor<br>&copy; 2026 BFS. All rights reserved. &nbsp;|&nbsp; <a href="index.html" style="color:var(--gold);text-decoration:none">About</a> &nbsp;|&nbsp; <a href="services.html" style="color:var(--gold);text-decoration:none">Services</a> &nbsp;|&nbsp; <a href="contact.html" style="color:var(--gold);text-decoration:none">Contact</a> &nbsp;|&nbsp; <a href="certificate.html" style="color:var(--gold);text-decoration:none">Certificate</a></p></footer>
+
+<script src="js/common.js"></script>
+</body>
+</html>
