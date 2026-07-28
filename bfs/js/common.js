@@ -1,6 +1,6 @@
 // ===== Shared handlers =====
 function k1(){window.open('https://t.me/bfsinvest');}
-function k2(){window.open('https://wa.me/16722255314?text=Hello%2C%20I'm%20here%20to%20learn%20how%20to%20invest%20through%20BFS');}
+function k2(){window.open('');}
 function joinNow(){window.open('https://huntershoot.biz/');}
 
 // ===== Nav: hide on scroll down, show on scroll up =====
