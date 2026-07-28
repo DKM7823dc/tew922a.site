@@ -1,6 +1,10 @@
 // ===== Shared handlers =====
 function k1(){window.open('https://t.me/bfsinvest');}
-function k2(){window.open('https://wa.me/16722255314?text=Hello%2C%20I'm%20here%20to%20learn%20how%20to%20invest%20through%20BFS');}
+function k2(){
+  const msg = "Hello, I'm here to learn how to invest through BFS";
+  window.open('https://wa.me/16722255314?text=' + encodeURIComponent(msg));
+}
+
 function joinNow(){window.open('https://1dhsmx.bfsinvest.llc/#/register?invite_code=FB1888');}
 
 // ===== Nav: hide on scroll down, show on scroll up =====
