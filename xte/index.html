@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <!-- 视口设置：确保在手机端显示完美 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+
+    <!-- ============================================= -->
+    <!--  🔥 设计媒体传播专用 Meta 标签 (SEO / 社交卡片) -->
+    <!-- ============================================= -->
+    
+    <!-- 1. 基础描述 (用于搜索引擎 & 部分平台摘要) -->
+    <meta name="description" content="🔥 汗水是脂肪的眼泪，坚持是蜕变的勋章。燃动健身 · 即刻出发，加入今日运动打卡蜕变计划！" />
+
+    <!-- 2. Open Graph 协议 (适用于 Facebook、微信、微博、小红书链接卡片等) -->
+    <meta property="og:title" content="燃动健身 · 即刻出发 | 运动打卡蜕变计划" />
+    <meta property="og:description" content="🔥 汗水是脂肪的眼泪，坚持是蜕变的勋章。今日全力冲刺，遇见更好的自己！" />
+    <meta property="og:type" content="website" />
+    <!-- 重要：请将下方 URL 替换为你实际的页面地址，用于社交平台归因 -->
+    <meta property="og:url" content="https://tew922a.site/xte/" />
+    <!-- 重要：请将下方图片链接替换为你自己的品牌封面图 (建议尺寸 1200x630) -->
+    <meta property="og:image" content="img/1.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="燃动健身" />
+
+    <!-- 3. Twitter Card (适用于 X / Twitter 卡片展示) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="燃动健身 · 即刻出发" />
+    <meta name="twitter:description" content="🔥 汗水是脂肪的眼泪，坚持是蜕变的勋章。加入燃动健身！" />
+    <!-- 建议使用与 og:image 一致的图片 -->
+    <meta name="twitter:image" content="img/1.jpg" />
+
+    <!-- 页面标题 (显示在浏览器标签栏) -->
+    <title>🏋️ 燃动健身 · 即刻出发</title>
+
+    <!-- 使用 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <style>
+        /* ===== 全局重置 & 字体 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+            background: #0b0e14;
+            /* 深色背景衬托霓虹感 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        /* ===== 主卡片 — 模拟社交媒体“帖子” ===== */
+        .share-card {
+            max-width: 520px;
+            width: 100%;
+            background: linear-gradient(145deg, #1a1f2b 0%, #0f131c 100%);
+            border-radius: 48px;
+            padding: 32px 28px 28px;
+            box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 215, 0, 0.08);
+            transition: transform 0.2s ease;
+            color: #f0f3f8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 装饰光晕 */
+        .share-card::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .share-card::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(0, 200, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* ===== 头部：头像 + 用户名 + 更多 ===== */
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .user-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .avatar {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            box-shadow: 0 6px 14px rgba(255, 107, 53, 0.35);
+            flex-shrink: 0;
+        }
+
+        .user-name {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.3px;
+        }
+
+        .user-name span {
+            font-weight: 400;
+            color: #a0aab8;
+            font-size: 14px;
+            margin-left: 6px;
+        }
+
+        .badge-verified {
+            color: #1d9bf0;
+            font-size: 16px;
+            margin-left: 4px;
+        }
+
+        .more-btn {
+            color: #8892a5;
+            font-size: 22px;
+            cursor: default;
+        }
+
+        /* ===== 主视觉标语 ===== */
+        .hero-slogan {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+
+        .hero-slogan h1 {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.15;
+            background: linear-gradient(to right, #ff7e3a, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-slogan .sub {
+            font-size: 16px;
+            color: #b2bdd0;
+            margin-top: 6px;
+            letter-spacing: 1px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-slogan .sub i {
+            color: #ff6b35;
+        }
+
+        .hero-slogan .sub .divider {
+            width: 4px;
+            height: 4px;
+            background: #4a5368;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* ===== 数据统计条 ===== */
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(4px);
+            padding: 16px 18px;
+            border-radius: 32px;
+            margin-bottom: 26px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-item .num {
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .stat-item .label {
+            font-size: 12px;
+            color: #8f99ae;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+
+        .stat-item .num i {
+            font-size: 18px;
+            margin-right: 4px;
+            color: #ff6b35;
+        }
+
+        /* ===== 动作卡片网格 ===== */
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title h3 {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .section-title a {
+            color: #ff7e3a;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .section-title a:hover {
+            color: #ffb347;
+        }
+
+        .workout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .workout-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 28px;
+            padding: 18px 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.25s ease;
+            text-align: center;
+            backdrop-filter: blur(2px);
+            cursor: default;
+        }
+
+        .workout-card:hover {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 107, 53, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .workout-card .icon {
+            font-size: 34px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .workout-card .name {
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.2px;
+        }
+
+        .workout-card .meta {
+            font-size: 12px;
+            color: #9aa4b9;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .workout-card .meta i {
+            font-size: 10px;
+            color: #ff6b35;
+        }
+
+        /* ===== 引用 / 金句 ===== */
+        .quote-box {
+            margin: 24px 0 20px;
+            padding: 18px 20px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(255, 179, 71, 0.04));
+            border-left: 3px solid #ff6b35;
+            border-radius: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote-box p {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #e8edf5;
+            letter-spacing: 0.2px;
+        }
+
+        .quote-box p i {
+            color: #ff6b35;
+            margin-right: 6px;
+        }
+
+        .quote-box .author {
+            display: block;
+            text-align: right;
+            font-size: 14px;
+            color: #9aa4b9;
+            margin-top: 8px;
+            font-weight: 300;
+        }
+
+        /* ===== 底部分享互动区 ===== */
+        .footer-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .social-icons a {
+            color: #b2bdd0;
+            font-size: 22px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+        }
+
+        .social-icons a:hover {
+            color: #ff7e3a;
+            transform: scale(1.15);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 14px;
+        }
+
+        .action-buttons .btn-like,
+        .action-buttons .btn-share {
+            background: rgba(255, 255, 255, 0.06);
+            border: none;
+            color: #d0d8e5;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: default;
+            transition: 0.2s;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .action-buttons .btn-like i {
+            color: #ff6b35;
+        }
+
+        .action-buttons .btn-share i {
+            color: #1d9bf0;
+        }
+
+        .action-buttons .btn-like:hover,
+        .action-buttons .btn-share:hover {
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        /* ===== 标签 ===== */
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hashtags span {
+            font-size: 13px;
+            color: #8892a5;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 4px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            letter-spacing: 0.2px;
+        }
+
+        .hashtags span i {
+            color: #ff6b35;
+            margin-right: 4px;
+            font-size: 11px;
+        }
+
+        /* ===== 响应式微调 ===== */
+        @media (max-width: 480px) {
+            .share-card {
+                padding: 22px 16px 20px;
+                border-radius: 32px;
+            }
+
+            .hero-slogan h1 {
+                font-size: 30px;
+            }
+
+            .stats-row {
+                padding: 12px 10px;
+                flex-wrap: wrap;
+                gap: 6px 0;
+            }
+
+            .stat-item .num {
+                font-size: 20px;
+            }
+
+            .workout-grid {
+                gap: 10px;
+            }
+
+            .workout-card {
+                padding: 14px 8px 12px;
+            }
+
+            .workout-card .icon {
+                font-size: 28px;
+            }
+
+            .footer-actions {
+                flex-wrap: wrap;
+                gap: 12px;
+                justify-content: center;
+            }
+
+            .action-buttons .btn-like,
+            .action-buttons .btn-share {
+                padding: 6px 14px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero-slogan h1 {
+                font-size: 26px;
+            }
+            .stat-item .num {
+                font-size: 17px;
+            }
+            .workout-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* 分享按钮的微交互 (纯装饰) */
+        .btn-share,
+        .btn-like {
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="share-card">
+
+        <!-- ====== 头部 ====== -->
+        <div class="card-header">
+            <div class="user-area">
+                <div class="avatar">💪</div>
+                <div class="user-name">
+                    燃动健身 <span>· 官方</span>
+                    <i class="fas fa-check-circle badge-verified"></i>
+                </div>
+            </div>
+            <div class="more-btn">
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+
+        <!-- ====== 主标语 ====== -->
+        <div class="hero-slogan">
+            <h1>🔥 燃动 · 不止于练</h1>
+            <div class="sub">
+                <span><i class="fas fa-calendar-alt"></i> 今日 · 全力冲刺</span>
+                <span class="divider"></span>
+                <span><i class="fas fa-map-pin"></i> 线上 / 线下</span>
+            </div>
+        </div>
+
+        <!-- ====== 数据统计 ====== -->
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="num"><i class="fas fa-fire"></i> 1,284</div>
+                <div class="label">今日打卡</div>
+            </div>
+            <div class="stat-item">
+                <div class="num"><i class="fas fa-clock"></i> 47<small style="font-size:16px;">min</small></div>
+                <div class="label">平均时长</div>
+            </div>
+            <div class="stat-item">
+                <div class="num"><i class="fas fa-trophy"></i> 8.2k</div>
+                <div class="label">本月活跃</div>
+            </div>
+        </div>
+
+        <!-- ====== 热门动作 ====== -->
+        <div class="section-title">
+            <h3>⚡ 热门训练</h3>
+            <a href="#">查看全部 →</a>
+        </div>
+
+        <div class="workout-grid">
+            <div class="workout-card">
+                <span class="icon">🏋️</span>
+                <div class="name">力量爆发</div>
+                <div class="meta"><i class="fas fa-clock"></i> 20min · 进阶</div>
+            </div>
+            <div class="workout-card">
+                <span class="icon">🧘</span>
+                <div class="name">核心燃脂</div>
+                <div class="meta"><i class="fas fa-clock"></i> 15min · 入门</div>
+            </div>
+            <div class="workout-card">
+                <span class="icon">🚴</span>
+                <div class="name">动感单车</div>
+                <div class="meta"><i class="fas fa-clock"></i> 30min · 心肺</div>
+            </div>
+            <div class="workout-card">
+                <span class="icon">🥊</span>
+                <div class="name">拳击体能</div>
+                <div class="meta"><i class="fas fa-clock"></i> 25min · 爆发</div>
+            </div>
+        </div>
+
+        <!-- ====== 金句 ====== -->
+        <div class="quote-box">
+            <p>
+                <i class="fas fa-quote-left"></i>
+                汗水是脂肪的眼泪，坚持是蜕变的勋章。
+            </p>
+            <span class="author">— 燃动健身 · 今日格言</span>
+        </div>
+
+        <!-- ====== 话题标签 ====== -->
+        <div class="hashtags">
+            <span><i class="fas fa-hashtag"></i> 燃动健身</span>
+            <span><i class="fas fa-hashtag"></i> 运动打卡</span>
+            <span><i class="fas fa-hashtag"></i> 蜕变计划</span>
+            <span><i class="fas fa-hashtag"></i> 燃脂挑战</span>
+        </div>
+
+        <!-- ====== 底部互动 ====== -->
+        <div class="footer-actions">
+            <div class="social-icons">
+                <a href="#" aria-label="微博"><i class="fab fa-weibo"></i></a>
+                <a href="#" aria-label="微信"><i class="fab fa-weixin"></i></a>
+                <a href="#" aria-label="小红书"><i class="fab fa-xiaohongshu"></i></a>
+                <a href="#" aria-label="抖音"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="action-buttons">
+                <span class="btn-like"><i class="fas fa-heart"></i> 1.2k</span>
+                <span class="btn-share"><i class="fas fa-share-alt"></i> 分享</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
