@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WhatsApp</title>
+  <style>
+    body{
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display:flex; align-items:center; justify-content:center;
+      min-height:100vh; margin:0; padding:16px; background:#f6f7fb;
+      color:#222;
+    }
+    .card{
+      max-width:520px; width:100%;
+      background:#fff; border-radius:14px; padding:20px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+      text-align:center;
+    }
+    .btn{
+      margin-top:14px;
+      display:inline-block;
+      padding:10px 16px;
+      background:#25D366;
+      color:#fff;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .hint{ margin-top:10px; font-size:14px; color:#555; line-height:1.6; }
+  </style>
+</head>
+<body>
+ 
+
+  <script>
+    // ===== 修改这里：你的 WhatsApp 链接 =====
+    const waUrl = "https://chat.whatsapp.com/BlqyYC38P3BINNSPAgMc8d";
+
+    // 给按钮设置链接（备用）
+    document.getElementById("waBtn").href = waUrl;
+
+    // 通过 JS 跳转
+    window.location.href = waUrl;
+    // 也可以用：window.location.replace(waUrl);
+
+    // 备用：若浏览器阻止自动跳转，10 秒后仍保持按钮可点击
+    setTimeout(() => {
+      document.getElementById("waBtn").href = waUrl;
+    }, 10000);
+  </script>
+</body>
+</html>
